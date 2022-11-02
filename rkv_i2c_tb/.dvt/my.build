@@ -1,0 +1,22 @@
+# Automatically identify and compile all the source files in the project directory.
+# DO NOT explicitly list files/directories in 'dvt_auto_init' sections. Use 'dvt_init' sections instead.
++dvt_init+questa.vlog
+-O0
+-novopt
+-uvm
+
++incdir+../../rkv_dw_apb_i2c/src \
+					  +incdir+../agents/lvc_apb3 \
+					  +incdir+../agents/lvc_i2c \
+					  +incdir+../cfg \
+					  +incdir+../cov \
+					  +incdir+../reg \
+					  +incdir+../env \
+					  +incdir+../seq_lib \
+					  +incdir+../seq_lib/elem_seqs \
+					  +incdir+../tests
+					  
+					  
+vsim work.rkv_i2c_tb -sv_seed 0 +UVM_TESTNAME=rkv_i2c_quick_reg_access_test +UVM_VERBOSITY=UVM_MEDIUM -l sim.log
+
+vsim +UVM_VERBOSITY=UVM_MEDIUM -c -l questa.log work.tb -do $DVT_HOME/libs/dvt_debug_tcl/dvt_debug.tcl -sv_seed random +UVM_TESTNAME=mcdf_data_consistence_basic_test -novopt

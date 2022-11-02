@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations>
+    <configuration ATTR_AUTO_COMMAND="vlog -mfcu -incr -f ${dvt_current_build_file} -work ${project_loc}\work" ATTR_BUILDER_ENABLED="true" ATTR_BUILDER_NAME="Questa_Verilog_Builder" ATTR_CLEAN_COMMAND="cmd /c &quot;rmdir /s /q  ${project_loc}\work 2&gt;nul &amp; vlib ${project_loc}\work&quot;" ATTR_FILTERS_KIND="Questa,UVM," ATTR_FULL_COMMAND="cmd /c &quot;rmdir /s /q  ${project_loc}\work 2&gt;nul &amp; vlib ${project_loc}\work &amp;&amp; vlog -mfcu -incr -f ${dvt_current_build_file} -work ${project_loc}\work&quot;" ATTR_WORKING_DIRECTORY="${workspace_loc:\${project_name}}">
+        <patterns/>
+        <environment_variables ATTR_APPEND_ENVIRONMENT_VARIABLES="true"/>
+    </configuration>
+</configurations>
