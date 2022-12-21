@@ -14,7 +14,7 @@
 // Support  : support@rockeric.com
 // WeChat   : eva_bill 
 //-----------------------------------------------------------------------
-//`timescale 1ns/1ps
+
 
 `ifndef LVC_I2C_PKG_SV
 `define LVC_I2C_PKG_SV

@@ -14,10 +14,9 @@
 // Support  : support@rockeric.com
 // WeChat   : eva_bill 
 //-----------------------------------------------------------------------
-//`timescale 1ns/1ps
 `ifndef LVC_APB_IF_SV
 `define LVC_APB_IF_SV
-
+`timescale 1ns/1ps
 interface lvc_apb_if (input clk, input rstn);
 
   logic [31:0] paddr;

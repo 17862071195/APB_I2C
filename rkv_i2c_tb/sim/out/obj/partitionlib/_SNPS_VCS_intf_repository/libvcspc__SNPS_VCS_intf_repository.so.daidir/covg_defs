@@ -1,0 +1,248 @@
+global coverage_group 1 lvc_apb_if_1146083354_12::cg_lvc_apb_command lvc_apb_if::cg_lvc_apb_command __coverage_cg_lvc_apb_command unused_cg_lvc_apb_command_loop_label lvc_apb_if_1146083354_12 lvc_apb_if 0 1 0 0 0  ( 0 
+)
+ 1 1
+ 77 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_if.sv
+ 64 0 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+1
+0
+ 6 pwrite 65 0 0 0 0 66 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn 66 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 5 write 67 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 4 read 68 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 4 psel 71 0 0 0 0 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_3 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_3 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 3 sel 73 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 5 unsel 74 0 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 68 cg_lvc_apb_command::lvc_apb_if_1146083354_12_cg_lvc_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 3 cmd 0 76 0 0 0 0 2 0 1 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 3 1 1 0 0 -1 0 0 1 1 9 cmd_write 77 0 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 5 write 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_read 78 0 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 4 read 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_idle 79 0 1 0 1 1 1 0 1 1 5 unsel 0 0 0 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 1 lvc_apb_if_1146083354_12::cg_lvc_apb_trans_timing_group lvc_apb_if::cg_lvc_apb_trans_timing_group __coverage_cg_lvc_apb_trans_timing_group unused_cg_lvc_apb_trans_timing_group_loop_label lvc_apb_if_1146083354_12 lvc_apb_if 0 0 0 0 0  ( 0 
+)
+ 0 84 0 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 4 psel 85 0 0 0 0 88 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn 88 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 6 1 4 0 0 1 1 6 single 86 0 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_2 87 0 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_2 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_4 88 0 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_3 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_8 89 0 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_4 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_16 90 0 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_5 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_32 91 0 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_6 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+
+ 7 penable 93 0 0 0 0 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_7 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_7 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 4 0 0 1 1 6 single 94 0 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_8 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_9 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 5 burst 95 0 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 90 cg_lvc_apb_trans_timing_group::lvc_apb_if_1146083354_12_cg_lvc_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 1 lvc_apb_if_1146083354_12::cg_lvc_apb_write_read_order_group lvc_apb_if::cg_lvc_apb_write_read_order_group __coverage_cg_lvc_apb_write_read_order_group unused_cg_lvc_apb_write_read_order_group_loop_label lvc_apb_if_1146083354_12 lvc_apb_if 0 0 0 0 0  ( 0 
+)
+ 0 100 0 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 16 write_read_order 101 0 0 0 0 96 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn 96 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 4 0 0 1 1 11 write_write 102 0 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 write_read 103 0 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 read_write 104 0 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 9 read_read 105 0 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 98 cg_lvc_apb_write_read_order_group::lvc_apb_if_1146083354_12_cg_lvc_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group

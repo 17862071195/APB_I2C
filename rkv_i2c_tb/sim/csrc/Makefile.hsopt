@@ -33,9 +33,9 @@ TMPSPECENV=$(VCSTMPSPECENV)
 CC=$(TMPSPECENV) $(VCS_CC) $(TMPSPECARG)
 
 # C flags for compilation
-CFLAGS=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include    
+CFLAGS=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -fPIC -O -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include    
 
-CFLAGS_CG=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O  -fno-strict-aliasing   
+CFLAGS_CG=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O  -fno-strict-aliasing   
 
 ASFLAGS=
 LIBS=
@@ -43,5 +43,5 @@ LIBS=
 include filelist.hsopt
 
 
-rmapats.so: $(HSOPT_OBJS)
-	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../simv.daidir/rmapats.so $(HSOPT_OBJS)
+rmapats.so: rmapats_mop.o rmapats.o
+	@$(VCS_CC) $(LDFLAGS) $(LIBS) -shared -o ./../out/obj/rkv_i2c_tb.simv.daidir/rmapats.so rmapats_mop.o rmapats.o

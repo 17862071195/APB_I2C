@@ -1,0 +1,75 @@
+{
+    "vcs_paramclassrepository_UF52ed": [
+        "vcs_paramclassrepository_UF52ed",
+        "umN9C",
+        "module",
+        1
+    ],
+    "lvc_i2c_pkg": [
+        "lvc_i2c_pkg",
+        "rPVTq",
+        "module",
+        7
+    ],
+    "pc__vcs_msglog": [
+        "pc__vcs_msglog",
+        "NHpZ7",
+        "module",
+        2
+    ],
+    "uvm_pkg": [
+        "uvm_pkg",
+        "zr7M1",
+        "module",
+        5
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        3
+    ],
+    "lvc_apb_pkg": [
+        "lvc_apb_pkg",
+        "AvTGM",
+        "module",
+        6
+    ],
+    "rkv_i2c_pkg": [
+        "rkv_i2c_pkg",
+        "rj73V",
+        "module",
+        8
+    ],
+    "_vcs_msglog": [
+        "_vcs_msglog",
+        "zQBzV",
+        "module",
+        4
+    ],
+    "lvc_apb_if_1146083354_12": [
+        "lvc_apb_if_1146083354_12",
+        "FsWgj",
+        "module",
+        9
+    ],
+    "_vcs_internal_pc_partition_name_": "_vcs_msglog_UF52e",
+    "lvc_i2c_if_1146083354_12": [
+        "lvc_i2c_if_1146083354_12",
+        "Y2PI0",
+        "module",
+        10
+    ],
+    "rkv_i2c_if_1146083354_12": [
+        "rkv_i2c_if_1146083354_12",
+        "uakcc",
+        "module",
+        11
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        12
+    ]
+}

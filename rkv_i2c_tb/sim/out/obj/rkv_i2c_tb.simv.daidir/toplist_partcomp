@@ -1,0 +1,9 @@
+uvm_pkg
+_vcs_msglog
+_vcs_unit__3820934895
+uvm_custom_install_recording
+uvm_custom_install_verdi_recording
+lvc_apb_pkg
+lvc_i2c_pkg
+rkv_i2c_pkg
+rkv_i2c_tb

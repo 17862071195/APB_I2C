@@ -14,7 +14,6 @@
 // Support  : support@rockeric.com
 // WeChat   : eva_bill 
 //-----------------------------------------------------------------------
-//`timescale 1ns/1ps
 `ifndef LVC_APB_PKG_SV
 `define LVC_APB_PKG_SV
 

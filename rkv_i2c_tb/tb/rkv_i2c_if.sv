@@ -1,8 +1,10 @@
-//`timescale 1ns/1ps
+
 `ifndef RKV_I2C_IF_SV
 `define RKV_I2C_IF_SV
 interface rkv_i2c_if;
   import rkv_i2c_pkg::IC_INTR_NUM;
+  import uvm_pkg::*;
+  `include "uvm_macros.svh"
 
   logic i2c_clk;
   logic i2c_rstn;
@@ -49,6 +51,27 @@ interface rkv_i2c_if;
   task wait_i2c(int n);
     repeat(n) @(i2c_ck);
   endtask
+
+  task wait_intr(int id=-1);
+    if(id > IC_INTR_NUM -1) begin
+      `uvm_error("OUTRANGE", $sformatf("Interrupt id [%0d] is out of range [%0d : 0]", id, IC_INTR_NUM-1))
+    end
+    else begin
+	    if(id >= 0)
+		    @(intr iff intr[id] === 1'b1);
+	    else
+		    @(intr iff intr >= 0);
+    end
+  endtask
+
+  function int get_intr(int id);
+    if(id > IC_INTR_NUM -1) begin
+      `uvm_error("OUTRANGE", $sformatf("Interrupt id [%0d] is out of range [%0d : 0]", id, IC_INTR_NUM-1))
+      return -1;
+    end
+    else 
+      return intr[id]; 
+  endfunction
 
   task wait_rstn_release();
     fork

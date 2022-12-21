@@ -1,0 +1,23 @@
+# partcomp stitch map
+# format:
+#   <line> ::= <module name> : <instance name>[ # <comment>] | # <comment>
+# partition _vcs_pc_package__h66j1c
+std # std
+# partition _vcs_msglog_UF52ed
+uvm_pkg # uvm_pkg
+_vcs_msglog # _vcs_msglog
+lvc_apb_pkg # lvc_apb_pkg
+lvc_i2c_pkg # lvc_i2c_pkg
+rkv_i2c_pkg # rkv_i2c_pkg
+# partition uvm_custom_install_recording_87QqAb
+uvm_custom_install_recording # uvm_custom_install_recording
+uvm_custom_install_verdi_recording # uvm_custom_install_verdi_recording
+# partition rkv_i2c_tb_67wvne
+rkv_i2c_tb # rkv_i2c_tb
+lvc_apb_if_1146083354_12 : apb_if
+lvc_i2c_if_1146083354_12 : i2c_if
+rkv_i2c_if_1146083354_12 : top_if
+# partition _SNPS_VCS_intf_repository
+lvc_apb_if_1146083354_12
+lvc_i2c_if_1146083354_12
+rkv_i2c_if_1146083354_12

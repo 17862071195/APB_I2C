@@ -1,4 +1,4 @@
-//`timescale 1ns/1ps
+`timescale 1ns/1ps
 module rkv_i2c_tb;
   parameter real i2c_clk_peroid = 10ns; // 100MHz
   parameter real apb_clk_peroid = 4ns;  // 250MHz
@@ -127,9 +127,8 @@ module rkv_i2c_tb;
 
   initial begin 
     // do interface configuration from top tb (HW) to verification env (SW)
-    uvm_config_db#(virtual rkv_i2c_if)::set(uvm_root::get(), "uvm_test_top.env.sqr", "vif", top_if);
+    uvm_config_db#(virtual rkv_i2c_if)::set(uvm_root::get(), "uvm_test_top.env", "vif", top_if);
     uvm_config_db#(virtual lvc_apb_if)::set(uvm_root::get(), "uvm_test_top.env.apb_mst*", "vif", apb_if);
-	  uvm_config_db#(virtual lvc_i2c_if)::set(uvm_root::get(), "uvm_test_top", "i2c_vif", i2c_if);
     uvm_config_db#(virtual lvc_i2c_if)::set(uvm_root::get(), "uvm_test_top.env", "i2c_vif", i2c_if);
     run_test("rkv_i2c_quick_reg_access_test");
   end

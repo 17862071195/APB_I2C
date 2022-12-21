@@ -1,5 +1,4 @@
 
-
 `ifndef RKV_APB_WAIT_EMPTY_SEQ_SV
 `define RKV_APB_WAIT_EMPTY_SEQ_SV
 
@@ -17,7 +16,7 @@ class rkv_apb_wait_empty_seq extends rkv_apb_base_sequence;
 
     while(1) begin
       rgm.IC_STATUS.mirror(status);
-      if(rgm.IC_STATUS.ACTIVITY.get() == 0 && rgm.IC_STATUS.TFE.get() == 1) break;
+      if(rgm.IC_STATUS.ACTIVITY.get() == 0 && rgm.IC_STATUS.TFE.get() == 1 && rgm.IC_STATUS.RFNE.get == 0) break;
       repeat(100) @(p_sequencer.vif.cb_mon);
     end
 

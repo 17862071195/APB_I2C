@@ -1,0 +1,108 @@
+#!/bin/csh -f
+set EXECNAME=`basename $0`
+set CURDIR=`pwd`
+set INLINE_SIMV=""
+set MOVE_SIMV=""
+if ( "$1" == "-h" )  then 
+    echo "Usage : "
+    echo "        $EXECNAME [-move] <target-dir>"
+    echo "        $EXECNAME -inline"
+    exit;
+else if ( "$1" == "-inline" )  then 
+    if ( $# != 1) then
+        echo "Usage : "
+        echo "        $EXECNAME [-move] <target-dir>"
+        echo "        $EXECNAME -inline"
+        exit;
+    endif
+    set INLINE_SIMV="TRUE"
+else if ( "$1" == "-move" ) then
+    if ( $# != 2) then
+        echo "Usage : "
+        echo "        $EXECNAME [-move] <target-dir>"
+        echo "        $EXECNAME -inline"
+        exit;
+    endif
+    set MOVE_SIMV="TRUE"
+    set TARGETDIR=$2
+else
+    if ( $# > 1) then
+        echo "Usage : "
+        echo "        $EXECNAME [-move] <target-dir>"
+        echo "        $EXECNAME -inline"
+        exit;
+    endif
+    if ( $# == 0 ) then
+        set TARGETDIR=${CURDIR}
+    else
+        set TARGETDIR=$1
+    endif
+endif
+
+set CP="cp -rp"
+if ( "${MOVE_SIMV}" == "TRUE"  || "${INLINE_SIMV}" == "TRUE") then
+    set CP="mv"
+endif
+if ( "$INLINE_SIMV" != "TRUE" ) then
+    if ( ! -d ${TARGETDIR} ) then
+        echo "Error: target directory '${TARGETDIR}' does not exist"
+        exit -1
+    endif
+    cd ${TARGETDIR}
+    set TARGETDIR=`pwd`
+    cd ${CURDIR}
+endif
+set DAIDIR=`echo $0 | sed 's/'$EXECNAME'$//'`
+if ( "x$DAIDIR" == "x")  then
+        set DAIDIR="."
+endif
+cd ${DAIDIR}
+set DAIDIR=`pwd`
+cd ${CURDIR}
+set SIMV=`basename ${DAIDIR} | sed 's/.daidir$//'`
+set EXECPATH="${DAIDIR}/.."
+set PCRELOCTABLE="${DAIDIR}/.pcreloctable"
+if ( ! -f ${PCRELOCTABLE} ) then
+        echo "Error : no partition relocation table find, simulator is not relocatable"
+        exit -1;
+endif
+cd ${EXECPATH}
+set EXECPATH=`pwd`
+cd ${CURDIR}
+if ( "${INLINE_SIMV}" != "TRUE" ) then
+    if ( "x${EXECPATH}" == "x${TARGETDIR}" ) then
+        echo "simulator is right in the target directory now."
+        exit -1
+    endif
+    echo "Relocating simulator '${SIMV}' from ${EXECPATH} to ${TARGETDIR} ..."
+
+    echo ${CP} ${EXECPATH}/${SIMV} ${TARGETDIR}
+    ${CP} ${EXECPATH}/${SIMV} ${TARGETDIR}
+    echo ${CP} ${EXECPATH}/${SIMV}.daidir  ${TARGETDIR}
+    ${CP} ${EXECPATH}/${SIMV}.daidir  ${TARGETDIR}
+    echo ${CP} ${EXECPATH}/${SIMV}.vdb  ${TARGETDIR}
+    ${CP} ${EXECPATH}/${SIMV}.vdb  ${TARGETDIR}
+else
+    set TARGETDIR="${EXECPATH}"
+endif
+if ( -f ${TARGETDIR}/${SIMV}.daidir/.simv_inline ) then
+    exit
+endif
+set COV_PARTITIONLIB="${TARGETDIR}/${SIMV}.vdb/partitionlib"
+set PARTITIONLIB="${TARGETDIR}/${SIMV}.daidir/partitionlib"
+foreach partdir ( `\ls -A ${PARTITIONLIB} ` )
+    if ( -l ${PARTITIONLIB}/$partdir )  then
+        set origdir = `\readlink ${PARTITIONLIB}/$partdir`
+        while ( -l $origdir )
+            set origdir=`\readlink $origdir`
+        end
+        \rm -rf ${PARTITIONLIB}/$partdir
+        echo ${CP} $origdir ${PARTITIONLIB}/$partdir
+        ${CP} $origdir ${PARTITIONLIB}/$partdir
+        \rm -rf ${COV_PARTITIONLIB}/verilog/${partdir}.vdb
+        \ln -sf ${TARGETDIR}/${SIMV}.daidir/partitionlib/${partdir}/simv.vdb ${COV_PARTITIONLIB}/verilog/${partdir}.vdb
+    endif
+end
+\touch ${TARGETDIR}/${SIMV}.daidir/.simv_inline
+\touch ${TARGETDIR}/${SIMV}.daidir/vcselab_misc_vcselabref.db
+\touch ${TARGETDIR}/${SIMV}

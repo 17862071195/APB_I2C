@@ -1,0 +1,16 @@
+
+Error-[FCTF] Failed to create temp file
+  Possible bad or full TEMP_DIRECTORY /tmp/vcs_20221221142534_27092/.
+
+4 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository_vcsintf
+recompiling module lvc_apb_if
+recompiling module lvc_i2c_if
+recompiling module rkv_i2c_if
+All of 4 modules done
+make[2]: Entering directory `/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/csrc' \
+
+/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/libvcspc__SNPS_VCS_intf_repository.so \
+up to date
+make[2]: Leaving directory `/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/csrc' \
+

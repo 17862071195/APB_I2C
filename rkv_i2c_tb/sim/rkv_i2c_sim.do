@@ -17,6 +17,9 @@ set INCDIR "+incdir+../../rkv_dw_apb_i2c/src \
 					  +incdir+../env \
 					  +incdir+../seq_lib \
 					  +incdir+../seq_lib/elem_seqs \
+					  +incdir+../seq_lib/user_elem_seqs \
+					  +incdir+../seq_lib/user_virt_seqs \
+					  +incdir+../tests/user_tests \
 					  +incdir+../tests "
 
 set VCOMP "vlog -timescale=1ns/1ps -l comp.log $INCDIR"

@@ -8,19 +8,19 @@ VSRC=..
 TARGET_ARCH=
 
 # Choose name of executable 
-PRODUCTBASE=$(VSRC)/simv
+PRODUCTBASE=$(VSRC)/out/obj/rkv_i2c_tb.simv
 
 PRODUCT=$(PRODUCTBASE)
 
 # Product timestamp file. If product is newer than this one,
 # we will also re-link the product.
-PRODUCT_TIMESTAMP=product_timestamp
+PRODUCT_TIMESTAMP=product_timestamp_stitch
 
 # Path to runtime library
 
 DEPLIBS=
 VCSUCLI=-lvcsucli
-RUNTIME=-lvcsnew -lsimprofile -lvirsim -lreader_common /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libBA.a -luclinative /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_tls.o $(DEPLIBS) 
+RUNTIME=-lvcsnew -lsimprofile -lvirsim -lvcsucli -lhdlxmr -lreader_common /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libBA.a -luclinative /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_tls.o $(DEPLIBS) 
 
 VCS_SAVE_RESTORE_OBJ=/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_save_restore_new.o
 
@@ -40,16 +40,16 @@ LD=g++
 STRIPFLAGS= 
 
 PRE_LDFLAGS= # Loader Flags
-LDFLAGS= -rdynamic -Wl,-rpath=/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib -L/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib
+LDFLAGS=-z muldefs -rdynamic -Wl,-rpath=/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib -L/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib
 # Picarchive Flags
-PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$$ORIGIN'/simv.daidir//scsim.db.dir 
+PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/rkv_i2c_tb.simv.daidir/ -Wl,-rpath=./rkv_i2c_tb.simv.daidir/ -Wl,-rpath='$$ORIGIN'/rkv_i2c_tb.simv.daidir//scsim.db.dir 
 
 # C run time startup
 CRT0=
 # C run time startup
 CRTN=
 # Machine specific libraries
-SYSLIBS=-ldl  -lc -lm -lpthread -ldl
+SYSLIBS=/opt/synopsys/verdi/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl
 
 # Default defines
 SHELL=/bin/sh
@@ -65,11 +65,11 @@ TMPSPECENV=$(VCSTMPSPECENV)
 CC=$(TMPSPECENV) $(VCS_CC) $(TMPSPECARG)
 
 # C flags for compilation
-CFLAGS=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include   
+CFLAGS=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -fPIC -O -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include   
 
-CFLAGS_O0=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O0  -fno-strict-aliasing   
+CFLAGS_O0=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O0  -fno-strict-aliasing   
 
-CFLAGS_CG=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O  -fno-strict-aliasing   
+CFLAGS_CG=-w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -fPIC -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include -O  -fno-strict-aliasing   
 
 LD_PARTIAL_LOADER=ld
 # Partial linking
@@ -116,10 +116,17 @@ $(PRODUCT_TIMESTAMP) : product_clean_order
 	@touch $(PRODUCT_TIMESTAMP)
 	@-if [ -d ./objs ]; then find ./objs -type d -empty -delete; fi
 
-$(PRODUCT) :  $(LD_VERSION_CHECK)  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB) /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libsimprofile.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libreader_common.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libBA.a /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libuclinative.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_tls.o /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so  $(VCS_SAVE_RESTORE_OBJ) 
+$(PRODUCT) :  $(LD_VERSION_CHECK)  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB) /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libsimprofile.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvirsim.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so $(VCS_HOME)/linux64/lib/libhdlxmr.so  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libreader_common.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libBA.a /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libuclinative.so /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/vcs_tls.o /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so  $(VCS_SAVE_RESTORE_OBJ) 
 	@touch $(PRODUCT)
+
+PRODUCT_STITCH_SO:$(VCS_PARTCOMP_STITCH_OBJS_SHARED) 
+	@-if [ "x$(VCS_PARTCOMP_STITCH_OBJS_SHARED)" != "x" ]; then $(LD) $(STRIPFLAGS) $(LDFLAGS) $(LIBS) -shared -o $(VCS_PARTCOMP_STITCH_SHARED_OBJ) $(VCS_PARTCOMP_STITCH_OBJS_SHARED); fi
 
 uvm_dpi.o : uvm_dpi.d /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.cc
 	g++ $(CFLAGS) -c /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.cc
 uvm_dpi.d : /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.cc
 	@g++ -MM $(CFLAGS) -c /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/dpi/uvm_dpi.cc > uvm_dpi.d
+uvm_verdi_dpi.o : uvm_verdi_dpi.d /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/dpi/uvm_verdi_dpi.cpp
+	g++ $(CFLAGS) -c /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/dpi/uvm_verdi_dpi.cpp
+uvm_verdi_dpi.d : /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/dpi/uvm_verdi_dpi.cpp
+	@g++ -MM $(CFLAGS) -c /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/dpi/uvm_verdi_dpi.cpp > uvm_verdi_dpi.d

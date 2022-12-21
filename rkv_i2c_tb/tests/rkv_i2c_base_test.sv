@@ -6,8 +6,6 @@ virtual class rkv_i2c_base_test extends uvm_test;
   rkv_i2c_config cfg;
 
   rkv_i2c_env env;
-	
-	virtual lvc_i2c_if i2c_vif;
 
   function new(string name = "rkv_i2c_base_test", uvm_component parent);
     super.new(name, parent);
@@ -15,11 +13,7 @@ virtual class rkv_i2c_base_test extends uvm_test;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-	  //i2c_config create
-	  void'( uvm_config_db#(virtual lvc_i2c_if)::get(this,"","i2c_vif",i2c_vif) );
     cfg = rkv_i2c_config::type_id::create("cfg");
-	  cfg.set_if(i2c_vif);
-	  //env create
     uvm_config_db#(rkv_i2c_config)::set(this,"env","cfg", cfg);
     env = rkv_i2c_env::type_id::create("env", this);
   endfunction
@@ -28,7 +22,7 @@ virtual class rkv_i2c_base_test extends uvm_test;
     super.end_of_elaboration_phase(phase);
     uvm_root::get().set_report_verbosity_level_hier(UVM_HIGH);
     uvm_root::get().set_report_max_quit_count(10);
-    uvm_root::get().set_timeout(10ms);
+    //uvm_root::get().set_timeout(10ms);
   endfunction
 
   task run_phase(uvm_phase phase);

@@ -14,11 +14,11 @@ class rkv_i2c_quick_reg_access_test extends rkv_i2c_base_test;
     super.build_phase(phase);
     // TODO
     // modify components' configurations
+    cfg.master_scoreboard_enable = 0;
   endfunction
 
   task run_phase(uvm_phase phase);
     rkv_i2c_quick_reg_access_virt_seq seq = rkv_i2c_quick_reg_access_virt_seq::type_id::create("seq");
-	  //super.run_phase(phase);
     phase.raise_objection(this);
     `uvm_info("SEQ", "sequence starting", UVM_LOW)
     seq.start(env.sqr);

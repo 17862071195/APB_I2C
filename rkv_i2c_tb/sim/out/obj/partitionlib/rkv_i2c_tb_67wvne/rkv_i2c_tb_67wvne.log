@@ -1,0 +1,22 @@
+14 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository_67wvne
+recompiling module rkv_DW_apb_i2c
+recompiling module rkv_DW_apb_i2c_toggle
+recompiling module rkv_DW_apb_i2c_sync
+recompiling module rkv_DW_apb_i2c_intctl
+recompiling module rkv_DW_apb_i2c_rx_shift
+recompiling module rkv_DW_apb_i2c_slvfsm
+recompiling module rkv_DW_apb_i2c_mstfsm
+recompiling module rkv_DW_apb_i2c_clk_gen
+recompiling module rkv_DW_apb_i2c_regfile
+recompiling module rkv_DW_apb_i2c_fifo
+recompiling module rkv_DW_apb_i2c_bcm06
+recompiling module rkv_DW_apb_i2c_bcm57
+recompiling module rkv_i2c_tb
+All of 14 modules done
+make[2]: Entering directory `/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/csrc' \
+
+/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/libvcspc_rkv_i2c_tb_67wvne.so \
+up to date
+make[2]: Leaving directory `/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/csrc' \
+

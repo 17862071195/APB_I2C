@@ -1,0 +1,15 @@
+
+Error-[CFCILLFBI] Cannot find cell in logical library
+../tb/rkv_i2c_tb.sv, 22
+  Cannot find cell 'rkv_DW_apb_i2c' in liblist for binding instance 
+  'rkv_i2c_tb.dut'.
+  instance : rkv_i2c_tb.dut - rkv_DW_apb_i2c
+  Logical library: DEFAULT
+  Config rule: 
+  "/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_iq1u8b/rkv_i2c_tb.v",
+  1: parent cell's library
+  Source Info: rkv_DW_apb_i2c dut( .ic_start_det_intr 
+  (top_if.intr[rkv_i2c_pkg::IC_START_DET_INTR_ID]),  .ic_stop_det_intr 
+  (top_if.intr[rkv_i2c_pkg::IC_STOP_DET_INTR_ID]),   ...
+
+1 error

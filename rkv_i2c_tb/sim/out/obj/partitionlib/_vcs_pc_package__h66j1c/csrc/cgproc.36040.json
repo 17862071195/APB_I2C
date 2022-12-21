@@ -1,0 +1,233 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.0/__vcs_pc_package__h66j1_1_archive_1.a",
+            "size": 176834,
+            "objects": [
+                [
+                    "vcs_paramclassrepository_d.o",
+                    7696
+                ],
+                [
+                    "std_d.o",
+                    50504
+                ],
+                [
+                    "SIMB.o",
+                    118634
+                ]
+            ]
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {
+            "child_modules": {
+                "vcs_paramclassrepository": 1,
+                "std": 1,
+                "pc__vcs_pc_package_": 1
+            },
+            "start_perf": [
+                0.25052905082702637,
+                0.128581,
+                0.158836,
+                285272,
+                285284,
+                1671633168.670403,
+                17432910977641
+            ],
+            "end_perf": [
+                0.25123310089111328,
+                0.128581,
+                0.15953800000000001,
+                285272,
+                285284,
+                17432913015462,
+                0,
+                0
+            ],
+            "nRouts": 5,
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "vcs_paramclassrepository": {
+            "child_modules": {},
+            "start_perf": [
+                0.25136399269104004,
+                0.128581,
+                0.15967100000000001,
+                285280,
+                285284,
+                1671633168.6712379,
+                17432913328411
+            ],
+            "nRouts": 5,
+            "nQuads": 0,
+            "significant_routs": [
+                [
+                    1,
+                    "M_VCSgd_vcs_paramclassrepository",
+                    2496201,
+                    181,
+                    0
+                ]
+            ],
+            "end_perf": [
+                0.25705099105834961,
+                0.13028000000000001,
+                0.163657,
+                287252,
+                287252,
+                17432929274962,
+                1,
+                0
+            ],
+            "nMops": 0
+        },
+        "pc__vcs_pc_package_": {
+            "child_modules": {},
+            "start_perf": [
+                0.25713109970092773,
+                0.13031599999999999,
+                0.16370299999999999,
+                287252,
+                287252,
+                1671633168.6770051,
+                17432929432788
+            ],
+            "skipped": 1,
+            "end_perf": [
+                0.25717496871948242,
+                0.13033600000000001,
+                0.16372800000000001,
+                287252,
+                287252,
+                17432929545832,
+                21474836481,
+                0
+            ]
+        },
+        "std": {
+            "child_modules": {},
+            "start_perf": [
+                0.25721502304077148,
+                0.130353,
+                0.16375000000000001,
+                287252,
+                287252,
+                1671633168.677089,
+                17432929654318
+            ],
+            "nRouts": 43,
+            "nQuads": 272,
+            "significant_routs": [
+                [
+                    7,
+                    "F_VCSClass_stdsemaphore_semaphore3a3anew",
+                    2991293,
+                    485,
+                    25
+                ],
+                [
+                    24,
+                    "F_VCSClass_stdprocess_process3a3aself",
+                    3598514,
+                    968,
+                    92
+                ]
+            ],
+            "svclass": [
+                "$vcs_nba_dyn_obj",
+                580,
+                35,
+                2,
+                2,
+                0,
+                "sigprop$$",
+                580,
+                35,
+                2,
+                2,
+                0,
+                "process",
+                2329,
+                203,
+                8,
+                8,
+                0,
+                "event",
+                601,
+                34,
+                2,
+                2,
+                0,
+                "mailbox",
+                1765,
+                143,
+                9,
+                9,
+                0,
+                "semaphore",
+                1115,
+                85,
+                5,
+                5,
+                0
+            ],
+            "end_perf": [
+                0.27174901962280273,
+                0.14194999999999999,
+                0.166684,
+                287252,
+                287276,
+                17432970304765,
+                1,
+                0
+            ],
+            "nMops": 675
+        }
+    },
+    "stat": {
+        "ru_self_end": {
+            "ru_nvcsw": 63,
+            "ru_majflt": 18,
+            "ru_utime_sec": 0.15193799999999999,
+            "ru_nivcsw": 8,
+            "ru_minflt": 32982,
+            "ru_maxrss_kb": 87576,
+            "ru_stime_sec": 0.168818
+        },
+        "ru_childs_end": {
+            "ru_nvcsw": 25,
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.026103999999999999,
+            "ru_nivcsw": 23,
+            "ru_minflt": 10709,
+            "ru_maxrss_kb": 33028,
+            "ru_stime_sec": 0.044638999999999998
+        },
+        "cpu_cycles_end": 17433004053547,
+        "peak_mem_kb": 287276
+    },
+    "CompUnits": {
+        "vcs_paramclassrepository_d": {
+            "mod": "vcs_paramclassrepository",
+            "archive": "archive.0/__vcs_pc_package__h66j1_1_archive_1.a",
+            "out": "vcs_paramclassrepository_d.o",
+            "text": 236,
+            "bytes": 7696,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "std_d": {
+            "mod": "std",
+            "archive": "archive.0/__vcs_pc_package__h66j1_1_archive_1.a",
+            "out": "std_d.o",
+            "text": 8207,
+            "bytes": 50504,
+            "cls": 6970,
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "reusePaths": {}
+}

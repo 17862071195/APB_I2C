@@ -1,0 +1,9 @@
+-mx_invoke_vcs_from_tool -mxunielab
+-sverilog
+-ntb_opts uvm-1.2
+-debug_acc+all
+-debug_region+cell+encrypt
+-l out/log/elab_rkv_i2c_tb.log
+-uum
+-full64
+-sverilog

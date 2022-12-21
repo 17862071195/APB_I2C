@@ -1,0 +1,159 @@
+{
+    "rkv_DW_apb_i2c_mstfsm_67wvne": [
+        "rkv_DW_apb_i2c_mstfsm_67wvne",
+        "i8c07",
+        "module",
+        19
+    ],
+    "lvc_i2c_pkg": [
+        "lvc_i2c_pkg",
+        "rPVTq",
+        "module",
+        7
+    ],
+    "vcs_paramclassrepository_pc_skel": [
+        "vcs_paramclassrepository_pc_skel",
+        "dUQ0G",
+        "module",
+        1
+    ],
+    "lvc_apb_pkg": [
+        "lvc_apb_pkg",
+        "AvTGM",
+        "module",
+        6
+    ],
+    "rkv_i2c_tb": [
+        "rkv_i2c_tb",
+        "yVKj5",
+        "module",
+        9
+    ],
+    "rkv_DW_apb_i2c_sync_67wvne": [
+        "rkv_DW_apb_i2c_sync_67wvne",
+        "PnJUi",
+        "module",
+        15
+    ],
+    "vcs_paramclassrepository_67wvne": [
+        "vcs_paramclassrepository_67wvne",
+        "gd9r1",
+        "module",
+        2
+    ],
+    "rkv_DW_apb_i2c_bcm06_0000_67wvne": [
+        "rkv_DW_apb_i2c_bcm06_0000_67wvne",
+        "LeBkZ",
+        "module",
+        23
+    ],
+    "rkv_DW_apb_i2c_fifo_67wvne": [
+        "rkv_DW_apb_i2c_fifo_67wvne",
+        "avbwN",
+        "module",
+        22
+    ],
+    "uvm_pkg": [
+        "uvm_pkg",
+        "zr7M1",
+        "module",
+        5
+    ],
+    "pc_rkv_i2c_tb": [
+        "pc_rkv_i2c_tb",
+        "rEMGh",
+        "module",
+        3
+    ],
+    "rkv_i2c_pkg": [
+        "rkv_i2c_pkg",
+        "rj73V",
+        "module",
+        8
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        4
+    ],
+    "rkv_DW_apb_i2c_regfile_67wvne": [
+        "rkv_DW_apb_i2c_regfile_67wvne",
+        "PSV8W",
+        "module",
+        21
+    ],
+    "lvc_apb_if_1146083354_12": [
+        "lvc_apb_if_1146083354_12",
+        "FsWgj",
+        "module",
+        10
+    ],
+    "rkv_DW_apb_i2c_bcm57_0000_0000_67wvne": [
+        "rkv_DW_apb_i2c_bcm57_0000_0000_67wvne",
+        "AhhB7",
+        "module",
+        25
+    ],
+    "lvc_i2c_if_1146083354_12": [
+        "lvc_i2c_if_1146083354_12",
+        "Y2PI0",
+        "module",
+        11
+    ],
+    "rkv_i2c_if_1146083354_12": [
+        "rkv_i2c_if_1146083354_12",
+        "uakcc",
+        "module",
+        12
+    ],
+    "rkv_DW_apb_i2c_67wvne": [
+        "rkv_DW_apb_i2c_67wvne",
+        "F9CAb",
+        "module",
+        13
+    ],
+    "rkv_DW_apb_i2c_toggle_67wvne": [
+        "rkv_DW_apb_i2c_toggle_67wvne",
+        "EtxZV",
+        "module",
+        14
+    ],
+    "rkv_DW_apb_i2c_intctl_67wvne": [
+        "rkv_DW_apb_i2c_intctl_67wvne",
+        "D0nDQ",
+        "module",
+        16
+    ],
+    "rkv_DW_apb_i2c_rx_shift_67wvne": [
+        "rkv_DW_apb_i2c_rx_shift_67wvne",
+        "GrP4b",
+        "module",
+        17
+    ],
+    "rkv_DW_apb_i2c_slvfsm_67wvne": [
+        "rkv_DW_apb_i2c_slvfsm_67wvne",
+        "Hw7rH",
+        "module",
+        18
+    ],
+    "rkv_DW_apb_i2c_clk_gen_67wvne": [
+        "rkv_DW_apb_i2c_clk_gen_67wvne",
+        "js9Rh",
+        "module",
+        20
+    ],
+    "rkv_DW_apb_i2c_bcm57_0000_67wvne": [
+        "rkv_DW_apb_i2c_bcm57_0000_67wvne",
+        "e6BaQ",
+        "module",
+        24
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        26
+    ],
+    "_vcs_internal_pc_partition_name_": "rkv_i2c_tb_67wvn"
+}
