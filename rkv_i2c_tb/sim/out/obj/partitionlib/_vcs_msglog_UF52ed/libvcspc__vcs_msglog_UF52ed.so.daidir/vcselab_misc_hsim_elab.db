@@ -1,7 +1,7 @@
-psSimBaseName                      	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so
-psLogFileName                      	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/_vcs_msglog_UF52ed.log
-pDaiDir                            	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so.daidir
-destPath                           	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc/
+psSimBaseName                      	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so
+psLogFileName                      	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/_vcs_msglog_UF52ed.log
+pDaiDir                            	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so.daidir
+destPath                           	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
 hsimDlpPartitionFilename           	0

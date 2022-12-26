@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------
 
 
-cd /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim
+cd /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim
 
 ${VCS_HOME}/bin/vcs \
     #begin of .partcomp_options\
@@ -27,7 +27,7 @@ ${VCS_HOME}/bin/vcs \
     #end of .partcomp_options\
     -mx_invoke_vcs_from_tool \
     -mxunielab \
-    -partcomp_master_daidir=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv.daidir \
+    -partcomp_master_daidir=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv.daidir \
     -q \
     -assert \
     enable_hier \
@@ -38,13 +38,13 @@ ${VCS_HOME}/bin/vcs \
     implAssert \
     -q \
     -partcomp=so \
-    -partcomp_so_dir=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb \
+    -partcomp_so_dir=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb \
     VCS_PARTCOMP_LIB.pc_uvm_custom_install_recording_config \
-    -o /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/libvcspc_uvm_custom_install_recording_87QqAb.so \
-    -Mdir=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/csrc \
+    -o /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/libvcspc_uvm_custom_install_recording_87QqAb.so \
+    -Mdir=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/csrc \
     -Xarijit=0x2 \
     -sverilog   \
-    -l /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/uvm_custom_install_recording_87QqAb.log \
+    -l /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/uvm_custom_install_recording_87QqAb.log \
 
 cd -
 

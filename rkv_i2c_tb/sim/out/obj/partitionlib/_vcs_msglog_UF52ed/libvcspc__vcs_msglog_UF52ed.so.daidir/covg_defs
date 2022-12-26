@@ -1,13 +1,13 @@
 global coverage_group 0 lvc_apb_pkg::lvc_apb_master_monitor::lvc_apb_master_cov_trans __coverage_lvc_apb_master_monitor.lvc_apb_master_cov_trans unused_lvc_apb_master_monitor_lvc_apb_master_cov_trans_loop_label lvc_apb_pkg 0 1 0 0 0  ( 0 
 )
  1 7
- 90 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_master_monitor.svh
- 89 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_slave_monitor.svh
- 88 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_i2c/lvc_i2c_master_monitor.sv
- 87 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_i2c/lvc_i2c_slave_monitor.sv
- 66 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../reg/ral_rkv_i2c.sv
- 66 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../cov/rkv_i2c_cgm.sv
- 77 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_if.sv
+ 92 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_master_monitor.svh
+ 91 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_slave_monitor.svh
+ 90 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_i2c/lvc_i2c_master_monitor.sv
+ 89 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_i2c/lvc_i2c_slave_monitor.sv
+ 68 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../reg/ral_rkv_i2c.sv
+ 68 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../cov/rkv_i2c_cgm.sv
+ 79 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_if.sv
  66 0 0 0 1 0 0 0 0  1
 0
 26 0

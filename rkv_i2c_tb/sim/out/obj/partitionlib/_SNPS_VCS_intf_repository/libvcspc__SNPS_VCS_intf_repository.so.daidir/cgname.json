@@ -1,4 +1,17 @@
 {
+    "_vcs_internal_pc_partition_name_": "_SNPS_VCS_intf_repositor",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        12
+    ],
+    "pc__SNPS_VCS_intf_repository": [
+        "pc__SNPS_VCS_intf_repository",
+        "Tbg44",
+        "module",
+        3
+    ],
     "vcs_paramclassrepository_pc_skel": [
         "vcs_paramclassrepository_pc_skel",
         "dUQ0G",
@@ -11,24 +24,11 @@
         "module",
         2
     ],
-    "uvm_pkg": [
-        "uvm_pkg",
-        "zr7M1",
+    "lvc_i2c_pkg": [
+        "lvc_i2c_pkg",
+        "rPVTq",
         "module",
-        5
-    ],
-    "pc__SNPS_VCS_intf_repository": [
-        "pc__SNPS_VCS_intf_repository",
-        "Tbg44",
-        "module",
-        3
-    ],
-    "_vcs_internal_pc_partition_name_": "_SNPS_VCS_intf_repositor",
-    "lvc_i2c_if_1146083354_12": [
-        "lvc_i2c_if_1146083354_12",
-        "Y2PI0",
-        "module",
-        7
+        9
     ],
     "std": [
         "std",
@@ -36,29 +36,29 @@
         "module",
         4
     ],
+    "uvm_pkg": [
+        "uvm_pkg",
+        "zr7M1",
+        "module",
+        5
+    ],
     "lvc_apb_if_1146083354_12": [
         "lvc_apb_if_1146083354_12",
         "FsWgj",
         "module",
         6
     ],
+    "lvc_i2c_if_1146083354_12": [
+        "lvc_i2c_if_1146083354_12",
+        "Y2PI0",
+        "module",
+        7
+    ],
     "lvc_apb_pkg": [
         "lvc_apb_pkg",
         "AvTGM",
         "module",
         8
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        12
-    ],
-    "lvc_i2c_pkg": [
-        "lvc_i2c_pkg",
-        "rPVTq",
-        "module",
-        9
     ],
     "rkv_i2c_pkg": [
         "rkv_i2c_pkg",

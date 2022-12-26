@@ -1,6 +1,6 @@
 
 /* Source file "
-	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.v
+	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.v
 	", line 1 */
 (* VCS_LogicalLibrary = "VCS_PARTCOMP_LIB" *)
 config pc__SNPS_VCS_intf_repository_config;
@@ -29,8 +29,8 @@ module pc__SNPS_VCS_intf_repository;
 	rkv_i2c_if DEFAULT_rkv_i2c_if();
 
 	initial begin : XmrProcess
-	  $$shared_interface("lvc_apb_if", "lvc_apb_if_1146083354_12", 
-		  "lvc_i2c_if", "lvc_i2c_if_1146083354_12", "rkv_i2c_if", 
-		  "rkv_i2c_if_1146083354_12");
+	  $$shared_interface("rkv_i2c_if", "rkv_i2c_if_1146083354_12", 
+		  "lvc_apb_if", "lvc_apb_if_1146083354_12", "lvc_i2c_if", 
+		  "lvc_i2c_if_1146083354_12");
 	end
 endmodule

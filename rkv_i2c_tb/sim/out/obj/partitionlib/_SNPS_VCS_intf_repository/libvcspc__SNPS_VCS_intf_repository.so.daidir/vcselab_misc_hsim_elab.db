@@ -1,7 +1,7 @@
-psSimBaseName                      	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/libvcspc__SNPS_VCS_intf_repository.so
-psLogFileName                      	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.log
-pDaiDir                            	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/libvcspc__SNPS_VCS_intf_repository.so.daidir
-destPath                           	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/csrc/
+psSimBaseName                      	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/libvcspc__SNPS_VCS_intf_repository.so
+psLogFileName                      	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.log
+pDaiDir                            	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/libvcspc__SNPS_VCS_intf_repository.so.daidir
+destPath                           	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/csrc/
 fSharedMaster                      	0
 fHsimPCSharedLibSpecified          	0
 hsimDlpPartitionFilename           	0

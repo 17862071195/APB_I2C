@@ -1,6 +1,6 @@
 
 /* Source file "
-	/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/rkv_i2c_tb.v
+	/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/rkv_i2c_tb.v
 	", line 1 */
 (* VCS_LogicalLibrary = "VCS_PARTCOMP_LIB" *)
 config pc_rkv_i2c_tb_config;

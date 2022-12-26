@@ -26,7 +26,7 @@ pcomp_elab_code.o: pcomp_elab_code.m
 PARTCOMP_STITCH_INCR = pc_stitch.incr
 VCS_PARTCOMP_STITCH_OBJS_SIMV = pcomp_elab_code.o $(HSOPT_OBJS_STITCH)
 VCS_PARTCOMP_STITCH_SHARED_OBJ = ./../out/obj/rkv_i2c_tb.simv.daidir/pc_stitch.so
-VCS_PARTCOMP_STITCH_SHARED_OBJ_PATH = /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim//out/obj/rkv_i2c_tb.simv.daidir//pc_stitch.so
+VCS_PARTCOMP_STITCH_SHARED_OBJ_PATH = /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim//out/obj/rkv_i2c_tb.simv.daidir//pc_stitch.so
 # Partition Compilation Flags
 PCLDFLAGS=-Wl,-rpath='$$ORIGIN'//rkv_i2c_tb.simv.daidir//libvcspc $(AUG_LDFLAGS)
 VCS_PARTCOMP_SHARED_OBJS=libvcspc__SNPS_VCS_intf_repository.so __SNPS_VCS_intf_repositor_1_archive_1.so libvcspc__vcs_pc_package__h66j1c.so __vcs_pc_package__h66j1_1_archive_1.so libvcspc__vcs_msglog_UF52ed.so __vcs_msglog_UF52e_1_archive_1.so libvcspc_uvm_custom_install_recording_87QqAb.so _uvm_custom_install_recording_87QqA_1_archive_1.so libvcspc_rkv_i2c_tb_67wvne.so _rkv_i2c_tb_67wvn_1_archive_1.so 

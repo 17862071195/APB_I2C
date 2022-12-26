@@ -26,7 +26,7 @@ virtual class rkv_i2c_base_virtual_sequence extends uvm_sequence;
 	apb_user_wait_empty_seq             apb_usr_wat_ept_seq;
   rkv_i2c_slave_write_response_seq    i2c_slv_write_resp_seq;
   rkv_i2c_slave_read_response_seq     i2c_slv_read_resp_seq;
-
+  apb_noread_packet_seq               apb_noread_pkt_seq;
 	
 	uvm_reg_access_seq									reg_access_seq;
 	uvm_reg_hw_reset_seq                reg_rst_seq;

@@ -1,14 +1,14 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim
+COMPILE_PATH=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim
 SystemC=FALSE
 UUM=TRUE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-SYNOPSYS_SIM_SETUP=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/synopsys_sim.setup 
-ENV="SYNOPSYS_SIM_SETUP=/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/./synopsys_sim.setup" 
+SYNOPSYS_SIM_SETUP=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/synopsys_sim.setup 
+ENV="SYNOPSYS_SIM_SETUP=/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/./synopsys_sim.setup" 
 TOP=uvm_custom_install_recording uvm_custom_install_verdi_recording rkv_i2c_tb 
 OPTION=-ssz -ssv -ssy 
 ELAB_OPTION=-ssz -ssv -ssy 

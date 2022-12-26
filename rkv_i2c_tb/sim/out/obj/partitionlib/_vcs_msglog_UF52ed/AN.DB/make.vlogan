@@ -1,6 +1,6 @@
 
 VLOGAN	= vlogan
-VLOGAN_OPT	= -l out/log/elab_rkv_i2c_tb.log +v2k +v2k -full64 -ntb_opts uvm-1.2 +incdir+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/ +v2k    +v2k -full64 -sverilog +vhdllib+WORK +vhdllib+DEFAULT +vhdllib+MEMLIB +vhdllib+DWARE +vhdllib+DW01 +vhdllib+DW02 +vhdllib+DW03 +vhdllib+DW04 +vhdllib+DW05 +vhdllib+DW06 +vhdllib+DW07 +vhdllib+DW08 +vhdllib+GTECH +vhdllib+GSCOMP +vhdllib+IEEE +vhdllib+IEEE_ASIC +vhdllib+SYNOPSYS +vhdllib+SNPS_EXT +vhdllib+STD_DEVELOPERSKIT +vhdllib+VITAL2000 +vhdllib+NOVAS +vhdllib+STD +vhdllib+SMARTMODEL +vhdllib+FLEXMODEL +reflib+WORK +reflib+DEFAULT -full64 -full64 -full64
+VLOGAN_OPT	= -l out/log/elab_rkv_i2c_tb.log +v2k +v2k -full64 -ntb_opts uvm-1.2 +incdir+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/ +v2k    +v2k -full64 -sverilog +vhdllib+WORK +vhdllib+DEFAULT +vhdllib+MEMLIB +vhdllib+DWARE +vhdllib+DW01 +vhdllib+DW02 +vhdllib+DW03 +vhdllib+DW04 +vhdllib+DW05 +vhdllib+DW06 +vhdllib+DW07 +vhdllib+DW08 +vhdllib+GTECH +vhdllib+GSCOMP +vhdllib+IEEE +vhdllib+IEEE_ASIC +vhdllib+SYNOPSYS +vhdllib+SNPS_EXT +vhdllib+STD_DEVELOPERSKIT +vhdllib+VITAL2000 +vhdllib+NOVAS +vhdllib+STD +vhdllib+SMARTMODEL +vhdllib+FLEXMODEL +reflib+WORK +reflib+DEFAULT -full64 -full64
 
 all :		_VCSgd_c8GOpd_1.db \
 

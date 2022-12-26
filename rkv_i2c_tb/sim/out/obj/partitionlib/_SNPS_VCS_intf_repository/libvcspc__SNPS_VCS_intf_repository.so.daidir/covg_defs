@@ -1,7 +1,7 @@
 global coverage_group 1 lvc_apb_if_1146083354_12::cg_lvc_apb_command lvc_apb_if::cg_lvc_apb_command __coverage_cg_lvc_apb_command unused_cg_lvc_apb_command_loop_label lvc_apb_if_1146083354_12 lvc_apb_if 0 1 0 0 0  ( 0 
 )
  1 1
- 77 /home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_if.sv
+ 79 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/../agents/lvc_apb3/lvc_apb_if.sv
  64 0 0 0 0 0 0 0 0  1
 0
 26 0

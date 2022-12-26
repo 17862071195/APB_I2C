@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
-  <srcinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim"  >
+  <srcinfo name="/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim"  >
     <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="O-2018.09-SP2"  />
       <fileinfo name=".mhdlinst.dat"  id="0"  />
       <fileinfo name="/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/directc/uvm_seed.vh"  id="1"  />
@@ -255,7 +255,7 @@
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_ss_scl_cnt_seq.sv"  id="250"  />
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_fs_scl_cnt_seq.sv"  id="251"  />
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_hs_scl_cnt_seq.sv"  id="252"  />
-      <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_sda_control_seq.sv"  id="253"  />
+      <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_sda_control_cg_virt_seq.sv"  id="253"  />
       <fileinfo name="../tests/./rkv_i2c_tests.svh"  id="254"  />
       <fileinfo name="../tests/./rkv_i2c_base_test.sv"  id="255"  />
       <fileinfo name="../tests/./rkv_i2c_quick_reg_access_test.sv"  id="256"  />
@@ -270,31 +270,29 @@
       <fileinfo name="../tests/user_tests/i2c_master_ss_scl_cnt_test.sv"  id="265"  />
       <fileinfo name="../tests/user_tests/i2c_master_fs_scl_cnt_test.sv"  id="266"  />
       <fileinfo name="../tests/user_tests/i2c_master_hs_scl_cnt_test.sv"  id="267"  />
-      <fileinfo name="../tests/user_tests/i2c_master_sda_control_test.sv"  id="268"  />
+      <fileinfo name="../tests/user_tests/i2c_master_sda_control_cg_test.sv"  id="268"  />
       <fileinfo name="../tb/rkv_i2c_tb.sv"  id="269"  />
       <fileinfo name="../agents/lvc_i2c/lvc_i2c_if.sv"  id="270"  />
       <fileinfo name="../tb/rkv_i2c_if.sv"  id="271"  />
       <fileinfo name="../agents/lvc_apb3/lvc_apb_if.sv"  id="272"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c.v"  id="273"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_toggle.v"  id="274"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_sync.v"  id="275"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm21.v"  id="276"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_intctl.v"  id="277"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm41.v"  id="278"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_tx_shift.v"  id="279"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_rx_shift.v"  id="280"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_biu.v"  id="281"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_slvfsm.v"  id="282"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_mstfsm.v"  id="283"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_rx_filter.v"  id="284"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_clk_gen.v"  id="285"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_regfile.v"  id="286"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_fifo.v"  id="287"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm06.v"  id="288"  />
-      <fileinfo name="../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm57.v"  id="289"  />
-      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.v"  id="290"  />
-      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_pc_package__h66j1c/_vcs_pc_package_.v"  id="291"  />
-      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/_vcs_msglog.v"  id="292"  />
-      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/uvm_custom_install_recording_87QqAb/uvm_custom_install_recording.v"  id="293"  />
-      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/rkv_i2c_tb.v"  id="294"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c.v"  id="273"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_toggle.v"  id="274"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_sync.v"  id="275"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm21.v"  id="276"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_intctl.v"  id="277"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm41.v"  id="278"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_tx_shift.v"  id="279"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_rx_shift.v"  id="280"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_biu.v"  id="281"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_slvfsm.v"  id="282"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_mstfsm.v"  id="283"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_rx_filter.v"  id="284"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_clk_gen.v"  id="285"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_regfile.v"  id="286"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_fifo.v"  id="287"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm06.v"  id="288"  />
+      <fileinfo name="/home/verifier/Code_VCS/MyIIC/rkv_i2c_tb/sim/../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm57.v"  id="289"  />
+      <fileinfo name="/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.v"  id="290"  />
+      <fileinfo name="/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/_vcs_msglog.v"  id="291"  />
+      <fileinfo name="/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/rkv_i2c_tb_67wvne/rkv_i2c_tb.v"  id="292"  />
     </srcinfo>
