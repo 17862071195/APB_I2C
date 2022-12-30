@@ -1,6 +1,6 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Mon Dec 26 22:44:45 2022
+# Saved on Fri Dec 30 21:59:11 2022
 # Designs open: 1
 #   Sim: /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv
 # Toplevel windows open: 1
@@ -65,7 +65,7 @@ if {![gui_exist_window -window TopLevel.1]} {
 } else { 
     set TopLevel.1 TopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state normal -rect {{424 301} {2341 1395}}
+gui_show_window -window ${TopLevel.1} -show_state maximized -rect {{1 38} {2560 1374}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -112,28 +112,28 @@ gui_show_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 439]
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 435]
 catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
 catch { set Stack.1 [gui_share_window -id ${HSPane.1} -type Stack -silent] }
 catch { set Class.1 [gui_share_window -id ${HSPane.1} -type Class -silent] }
 catch { set Object.1 [gui_share_window -id ${HSPane.1} -type Object -silent] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 439
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 435
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 438} {height 578} {dock_state left} {dock_on_new_line true} {child_hier_colhier 331} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 605]
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 434} {height 525} {dock_state left} {dock_on_new_line true} {child_hier_colhier 331} {child_hier_coltype 100} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 601]
 catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
 catch { set Local.1 [gui_share_window -id ${DLPane.1} -type Local -silent] }
 catch { set Member.1 [gui_share_window -id ${DLPane.1} -type Member -silent] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 605
-gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 578
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 601
+gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 524
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 604} {height 578} {dock_state left} {dock_on_new_line true} {child_data_colvariable 246} {child_data_colvalue 204} {child_data_coltype 147} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 403]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1918
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 403
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 600} {height 525} {dock_state left} {dock_on_new_line true} {child_data_colvariable 246} {child_data_colvalue 204} {child_data_coltype 147} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 726]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 2500
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 726
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1917} {height 402} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 2559} {height 725} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -177,11 +177,11 @@ gui_update_statusbar_target_frame ${TopLevel.1}
 # DVE Open design session: 
 
 if { [llength [lindex [gui_get_db -design Sim] 0]] == 0 } {
-gui_set_env SIMSETUP::SIMARGS {{+ntb_random_seed=1226224239 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=rkv_i2c_quick_reg_access_test -a out/sim/rkv_i2c_quick_reg_access_test_1226224239.log -cm_dir out/cov.vdb -cm_name rkv_i2c_quick_reg_access_test_1226224239}}
+gui_set_env SIMSETUP::SIMARGS {{+ntb_random_seed=1230215746 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=i2c_master_activity_intr_output_test -a out/sim/i2c_master_activity_intr_output_test_1230215746.log -cm_dir out/cov.vdb -cm_name i2c_master_activity_intr_output_test_1230215746}}
 gui_set_env SIMSETUP::SIMEXE {out/obj/rkv_i2c_tb.simv}
 gui_set_env SIMSETUP::ALLOW_POLL {0}
 if { ![gui_is_db_opened -db {/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv}] } {
-gui_sim_run Ucli -exe rkv_i2c_tb.simv -args { +ntb_random_seed=1226224239 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=rkv_i2c_quick_reg_access_test -a out/sim/rkv_i2c_quick_reg_access_test_1226224239.log -cm_dir out/cov.vdb -cm_name rkv_i2c_quick_reg_access_test_1226224239 -ucligui} -dir /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj -nosource
+gui_sim_run Ucli -exe rkv_i2c_tb.simv -args { +ntb_random_seed=1230215746 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=i2c_master_activity_intr_output_test -a out/sim/i2c_master_activity_intr_output_test_1230215746.log -cm_dir out/cov.vdb -cm_name i2c_master_activity_intr_output_test_1230215746 -ucligui} -dir /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj -nosource
 }
 }
 if { ![gui_sim_state -check active] } {error "Simulator did not start correctly" error}
@@ -213,7 +213,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 226000
+gui_set_time -C1_only 506370000
 
 
 
@@ -264,7 +264,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
 gui_open_source -id ${Source.1}  -replace -active {uvm_pkg.\uvm_root::run_test } /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh
-gui_view_scroll -id ${Source.1} -vertical -set 3900
+gui_view_scroll -id ${Source.1} -vertical -set 4220
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
 # Restore toplevel window zorder

@@ -44,3 +44,64 @@ make[2]: Entering directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/
 up to date
 make[2]: Leaving directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
 
+6 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository_UF52ed
+recompiling package _vcs_msglog
+recompiling package uvm_pkg
+recompiling package lvc_apb_pkg
+recompiling package lvc_i2c_pkg
+recompiling package rkv_i2c_pkg
+All of 6 modules done
+make[2]: Entering directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so \
+up to date
+make[2]: Leaving directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+6 modules and 0 UDP read.
+recompiling package lvc_apb_pkg
+recompiling package uvm_pkg
+recompiling package vcs_paramclassrepository_UF52ed
+recompiling package rkv_i2c_pkg
+recompiling package lvc_i2c_pkg
+recompiling package _vcs_msglog
+All of 6 modules done
+make[2]: Entering directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so \
+up to date
+make[2]: Leaving directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+
+
+Error-[MFNF] Member not found
+../seq_lib/user_virt_seqs/i2c_master_activity_intr_output_virt_seq.sv, 27
+"this.rgm.IC_INTR_MASK."
+  Could not find member 'upsate' in class 'ral_reg_rkv_i2c_IC_INTR_MASK', at 
+  "../reg/ral_rkv_i2c.sv", 351.
+  Instance stack trace:
+      rkv_i2c_pkg  ../env/rkv_i2c_pkg.sv, 5
+  
+
+1 error
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+6 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository_UF52ed
+recompiling package lvc_apb_pkg
+recompiling package rkv_i2c_pkg
+recompiling package uvm_pkg
+recompiling package lvc_i2c_pkg
+recompiling package _vcs_msglog
+All of 6 modules done
+make[2]: Entering directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/libvcspc__vcs_msglog_UF52ed.so \
+up to date
+make[2]: Leaving directory `/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_vcs_msglog_UF52ed/csrc' \
+

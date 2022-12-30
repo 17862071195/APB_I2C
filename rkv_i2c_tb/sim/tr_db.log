@@ -2,3 +2,12 @@
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1706}
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1714}
   CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1714}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1714}
+  CREATE_STREAM @142000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:1811}
+  CREATE_STREAM @262000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_slv.sequencer STREAM:2243}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1714}
+  CREATE_STREAM @142000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:1811}
+  CREATE_STREAM @262000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_slv.sequencer STREAM:2243}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.sqr STREAM:1714}
+  CREATE_STREAM @142000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:1811}
+  CREATE_STREAM @214000 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.i2c_slv.sequencer STREAM:2094}

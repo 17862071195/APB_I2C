@@ -4,7 +4,7 @@ Command: vlogan +incdir+../../rkv_dw_apb_i2c/src +incdir+../agents/lvc_apb3 +inc
 +incdir+../tests/. +incdir+../tests/user_tests -full64 -sverilog -ntb_opts uvm-1.2 \
 -timescale=1ps/1ps -l out/log/comp_rkv_i2c_tb.log ../tb/rkv_i2c_tb.sv
                          Chronologic VCS (TM)
-       Version O-2018.09-SP2_Full64 -- Mon Dec 26 22:40:24 2022
+       Version O-2018.09-SP2_Full64 -- Fri Dec 30 21:56:48 2022
                Copyright (c) 1991-2018 by Synopsys Inc.
                          ALL RIGHTS RESERVED
 
@@ -39,4 +39,4 @@ Back to file '/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'
 Parsing included file '/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/macros/uvm_deprecated_defines.svh'.
 Back to file '/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_macros.svh'.
 Back to file '../tb/rkv_i2c_tb.sv'.
-CPU time: .453 seconds to compile
+CPU time: .468 seconds to compile

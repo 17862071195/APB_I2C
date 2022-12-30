@@ -239,24 +239,28 @@
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_hs_scl_cnt_seq.sv"  id="234"  />
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_sda_control_cg_virt_seq.sv"  id="235"  />
       <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_enabled_cg_virt_seq.sv"  id="236"  />
-      <fileinfo name="../tests/./rkv_i2c_tests.svh"  id="237"  />
-      <fileinfo name="../tests/./rkv_i2c_base_test.sv"  id="238"  />
-      <fileinfo name="../tests/./rkv_i2c_quick_reg_access_test.sv"  id="239"  />
-      <fileinfo name="../tests/./rkv_i2c_reg_hw_reset_test.sv"  id="240"  />
-      <fileinfo name="../tests/./rkv_i2c_reg_bit_bash_test.sv"  id="241"  />
-      <fileinfo name="../tests/./rkv_i2c_reg_access_test.sv"  id="242"  />
-      <fileinfo name="../tests/./rkv_i2c_master_directed_interrupt_test.sv"  id="243"  />
-      <fileinfo name="../tests/./rkv_i2c_master_directed_write_packet_test.sv"  id="244"  />
-      <fileinfo name="../tests/./rkv_i2c_master_directed_read_packet_test.sv"  id="245"  />
-      <fileinfo name="../tests/user_tests/rkv_i2c_user_tests.svh"  id="246"  />
-      <fileinfo name="../tests/user_tests/master_address_cg_test.sv"  id="247"  />
-      <fileinfo name="../tests/user_tests/i2c_master_ss_scl_cnt_test.sv"  id="248"  />
-      <fileinfo name="../tests/user_tests/i2c_master_fs_scl_cnt_test.sv"  id="249"  />
-      <fileinfo name="../tests/user_tests/i2c_master_hs_scl_cnt_test.sv"  id="250"  />
-      <fileinfo name="../tests/user_tests/i2c_master_sda_control_cg_test.sv"  id="251"  />
-      <fileinfo name="../tests/user_tests/i2c_master_enabled_cg_test.sv"  id="252"  />
-      <fileinfo name="../agents/lvc_apb3/lvc_apb_if.sv"  id="253"  />
-      <fileinfo name="../agents/lvc_i2c/lvc_i2c_if.sv"  id="254"  />
-      <fileinfo name="../tb/rkv_i2c_if.sv"  id="255"  />
-      <fileinfo name=""  id="256"  />
+      <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_tx_abrt_intr_virt_seq.sv"  id="237"  />
+      <fileinfo name="../seq_lib/user_virt_seqs/i2c_master_activity_intr_output_virt_seq.sv"  id="238"  />
+      <fileinfo name="../tests/./rkv_i2c_tests.svh"  id="239"  />
+      <fileinfo name="../tests/./rkv_i2c_base_test.sv"  id="240"  />
+      <fileinfo name="../tests/./rkv_i2c_quick_reg_access_test.sv"  id="241"  />
+      <fileinfo name="../tests/./rkv_i2c_reg_hw_reset_test.sv"  id="242"  />
+      <fileinfo name="../tests/./rkv_i2c_reg_bit_bash_test.sv"  id="243"  />
+      <fileinfo name="../tests/./rkv_i2c_reg_access_test.sv"  id="244"  />
+      <fileinfo name="../tests/./rkv_i2c_master_directed_interrupt_test.sv"  id="245"  />
+      <fileinfo name="../tests/./rkv_i2c_master_directed_write_packet_test.sv"  id="246"  />
+      <fileinfo name="../tests/./rkv_i2c_master_directed_read_packet_test.sv"  id="247"  />
+      <fileinfo name="../tests/user_tests/rkv_i2c_user_tests.svh"  id="248"  />
+      <fileinfo name="../tests/user_tests/master_address_cg_test.sv"  id="249"  />
+      <fileinfo name="../tests/user_tests/i2c_master_ss_scl_cnt_test.sv"  id="250"  />
+      <fileinfo name="../tests/user_tests/i2c_master_fs_scl_cnt_test.sv"  id="251"  />
+      <fileinfo name="../tests/user_tests/i2c_master_hs_scl_cnt_test.sv"  id="252"  />
+      <fileinfo name="../tests/user_tests/i2c_master_sda_control_cg_test.sv"  id="253"  />
+      <fileinfo name="../tests/user_tests/i2c_master_enabled_cg_test.sv"  id="254"  />
+      <fileinfo name="../tests/user_tests/i2c_master_tx_abrt_intr_test.sv"  id="255"  />
+      <fileinfo name="../tests/user_tests/i2c_master_activity_intr_output_test.sv"  id="256"  />
+      <fileinfo name="../agents/lvc_apb3/lvc_apb_if.sv"  id="257"  />
+      <fileinfo name="../agents/lvc_i2c/lvc_i2c_if.sv"  id="258"  />
+      <fileinfo name="../tb/rkv_i2c_if.sv"  id="259"  />
+      <fileinfo name=""  id="260"  />
     </srcinfo>

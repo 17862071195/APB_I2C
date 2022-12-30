@@ -1,0 +1,84 @@
+Command: /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv +ntb_random_seed=1230195120 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH -gui +UVM_TESTNAME=i2c_master_tx_abrt_intr_test.sv -l out/sim/i2c_master_tx_abrt_intr_test.sv_1230195120.log -cm_dir out/cov.vdb -cm_name i2c_master_tx_abrt_intr_test.sv_1230195120
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Dec 30 19:51 2022
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+
+ucli% run
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable0_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable1_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ack_general_call_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_master_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_hs_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_fs_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ss_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_mst_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_tx_empty_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_slv_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_rstrt_en_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_slave_en_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_p_det_ifaddr_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_sda_hold_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_done_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_ic_rd_req_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_p_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_s_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_gen_call_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_clr_leftover_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_set_tx_empty_en_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_mst_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_rx_aborted_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_fifo_filled_and_flushed_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_source_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_tx_pop_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_rx_push_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+UVM_WARNING @ 0: reporter [BDTYP] Cannot create a component of type 'i2c_master_tx_abrt_intr_test.sv' because it is not registered with the factory.
+UVM_FATAL @ 0: reporter [INVTST] Requested test from command line +UVM_TESTNAME=i2c_master_tx_abrt_intr_test.sv not found.
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 0: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    1
+UVM_WARNING :    1
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[BDTYP]     1
+[INVTST]     1
+[UVM/REPORT/CATCHER]     1
+
+$finish called from file "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 135.
+$finish at simulation time                    0
+"../agents/lvc_apb3/lvc_apb_if.sv", 162: rkv_i2c_tb.apb_if.unnamed$$_12, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 167: rkv_i2c_tb.apb_if.unnamed$$_13, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 173: rkv_i2c_tb.apb_if.unnamed$$_14, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 179: rkv_i2c_tb.apb_if.unnamed$$_15, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 184: rkv_i2c_tb.apb_if.unnamed$$_16, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 189: rkv_i2c_tb.apb_if.unnamed$$_17, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 195: rkv_i2c_tb.apb_if.unnamed$$_18, 0 attempts, 0 match
+Simulation complete, time is 0 ps.
+
+ucli% ucliCore::getToolPID
+69927
+ucli% ucliCore::getToolPID
+69927
+ucli% ucliCore::getToolPID
+69927
+ucli% ucliCore::getToolPID
+69927           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      1.750 seconds;       Data structure size:   9.0Mb
+Fri Dec 30 19:53:16 2022

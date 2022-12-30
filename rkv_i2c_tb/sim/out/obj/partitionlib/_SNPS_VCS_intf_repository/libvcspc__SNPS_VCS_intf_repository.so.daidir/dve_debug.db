@@ -1,4 +1,4 @@
-255
+259
 /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/directc/uvm_seed.vh
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/partitionlib/_SNPS_VCS_intf_repository/_SNPS_VCS_intf_repository.v
 /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv
@@ -237,6 +237,8 @@
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/seq_lib/user_virt_seqs/i2c_master_hs_scl_cnt_seq.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/seq_lib/user_virt_seqs/i2c_master_sda_control_cg_virt_seq.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/seq_lib/user_virt_seqs/i2c_master_enabled_cg_virt_seq.sv
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/seq_lib/user_virt_seqs/i2c_master_tx_abrt_intr_virt_seq.sv
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/seq_lib/user_virt_seqs/i2c_master_activity_intr_output_virt_seq.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/rkv_i2c_tests.svh
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/rkv_i2c_base_test.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/rkv_i2c_quick_reg_access_test.sv
@@ -253,6 +255,8 @@
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/user_tests/i2c_master_hs_scl_cnt_test.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/user_tests/i2c_master_sda_control_cg_test.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/user_tests/i2c_master_enabled_cg_test.sv
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/user_tests/i2c_master_tx_abrt_intr_test.sv
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tests/user_tests/i2c_master_activity_intr_output_test.sv
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/tb/rkv_i2c_if.sv
 2
 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/work/AN.DB
