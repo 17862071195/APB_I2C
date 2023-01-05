@@ -8,22 +8,22 @@ gui_create_pref_key -category {dlg_settings} -key {tableWithImmediatePopup} -val
 # State setting overrides
 gui_state_default_create -off -ini
 gui_set_state_value -category Layout -key child_console_size_x -value 2559
-gui_set_state_value -category Layout -key child_console_size_y -value 726
-gui_set_state_value -category Layout -key child_data_coltype -value 147
-gui_set_state_value -category Layout -key child_data_colvalue -value 204
-gui_set_state_value -category Layout -key child_data_colvariable -value 246
-gui_set_state_value -category Layout -key child_data_size_x -value 601
-gui_set_state_value -category Layout -key child_data_size_y -value 524
+gui_set_state_value -category Layout -key child_console_size_y -value 806
+gui_set_state_value -category Layout -key child_data_coltype -value 93
+gui_set_state_value -category Layout -key child_data_colvalue -value 72
+gui_set_state_value -category Layout -key child_data_colvariable -value 239
+gui_set_state_value -category Layout -key child_data_size_x -value 391
+gui_set_state_value -category Layout -key child_data_size_y -value 444
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colhier -value 331
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
-gui_set_state_value -category Layout -key child_hier_size_x -value 435
-gui_set_state_value -category Layout -key child_hier_size_y -value 524
+gui_set_state_value -category Layout -key child_hier_size_x -value 384
+gui_set_state_value -category Layout -key child_hier_size_y -value 444
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-17}
-gui_set_state_value -category Layout -key child_source_size_x -value 1526
-gui_set_state_value -category Layout -key child_source_size_y -value 520
+gui_set_state_value -category Layout -key child_source_size_x -value 1787
+gui_set_state_value -category Layout -key child_source_size_y -value 440
 gui_set_state_value -category Layout -key child_wave_colname -value 323
 gui_set_state_value -category Layout -key child_wave_colvalue -value 229
 gui_set_state_value -category Layout -key child_wave_left -value 557
@@ -48,7 +48,6 @@ gui_state_default_create -off
 # Begin command logging
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
-gui_sim_run Ucli -exe out/obj/rkv_i2c_tb.simv -args {-ucligui  +ntb_random_seed=1230215746 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=i2c_master_activity_intr_output_test -a out/sim/i2c_master_activity_intr_output_test_1230215746.log -cm_dir out/cov.vdb -cm_name i2c_master_activity_intr_output_test_1230215746} -dir out/obj
+gui_sim_run Ucli -exe out/obj/rkv_i2c_tb.simv -args {-ucligui  +ntb_random_seed=0105214845 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH +UVM_TESTNAME=i2c_master_abrt_7b_addr_noack_test -a out/sim/i2c_master_abrt_7b_addr_noack_test_0105214845.log -cm_dir out/cov.vdb -cm_name i2c_master_abrt_7b_addr_noack_test_0105214845} -dir out/obj
 run
 gui_filter_log -window Console.1 -tab Log -type {All} -severity {All} -code INTRSUCES
-gui_filter_log -window Console.1 -tab Log -type {All} -severity {All}

@@ -19,12 +19,12 @@ class rkv_apb_write_packet_seq extends rkv_apb_base_sequence;
     super.body();
 
     foreach(packet[i]) begin
-//      // Wait until TX FIFO is not full 
-//      while(1) begin
-//        rgm.IC_STATUS.mirror(status);
-//        if(rgm.IC_STATUS.TFNF.get() == 1) break;
-//        repeat(100) @(p_sequencer.vif.cb_mon);
-//      end
+      // Wait until TX FIFO is not full 
+      while(1) begin
+        rgm.IC_STATUS.mirror(status);
+        if(rgm.IC_STATUS.TFNF.get() == 1) break;
+        repeat(100) @(p_sequencer.vif.cb_mon);
+      end
 
       rgm.IC_DATA_CMD.DAT.set(packet[i]);
       rgm.IC_DATA_CMD.CMD.set(RGM_WRITE); 

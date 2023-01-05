@@ -40,7 +40,9 @@ class rkv_apb_config_seq extends rkv_apb_base_sequence;
     if(IC_FS_SCL_HCNT >= 0) rgm.IC_FS_SCL_HCNT.write(status, 200); // 2us 
     if(IC_FS_SCL_LCNT >= 0) rgm.IC_FS_SCL_LCNT.write(status, 200); // 2us
 
-    if(ENABLE >= 0) rgm.IC_ENABLE.ENABLE.set('h1);
+    if(ENABLE > 0) rgm.IC_ENABLE.ENABLE.set('h1);
+    rgm.IC_ENABLE.update(status);
+    if(ENABLE == 0) rgm.IC_ENABLE.ENABLE.set('h0);
     rgm.IC_ENABLE.update(status);
 
     `uvm_info("body", "Exiting...", UVM_HIGH)

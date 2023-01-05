@@ -1,10 +1,10 @@
 
-`ifndef RKV_APB_USER_CONFIG_SEQ_SV
-`define RKV_APB_USER_CONFIG_SEQ_SV
+`ifndef APB_USER_CONFIG_SEQ_SV
+`define APB_USER_CONFIG_SEQ_SV
 
-class rkv_apb_user_config_seq extends rkv_apb_base_sequence;
+class apb_user_config_seq extends rkv_apb_base_sequence;
 
-  `uvm_object_utils(rkv_apb_user_config_seq)
+  `uvm_object_utils(apb_user_config_seq)
 
   constraint def_cstr {
     soft SPEED == -1;
@@ -81,5 +81,5 @@ class rkv_apb_user_config_seq extends rkv_apb_base_sequence;
 
 endclass
 
-`endif // RKV_APB_USER_CONFIG_SEQ_SV
+`endif // APB_USER_CONFIG_SEQ_SV
 

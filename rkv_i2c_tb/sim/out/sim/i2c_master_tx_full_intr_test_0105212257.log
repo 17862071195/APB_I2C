@@ -1,0 +1,16 @@
+Command: /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/out/obj/rkv_i2c_tb.simv +ntb_random_seed=0105212257 +UVM_NO_RELNOTES +UVM_VERBOSITY=UVM_HIGH -gui +UVM_TESTNAME=i2c_master_tx_full_intr_test -l out/sim/i2c_master_tx_full_intr_test_0105212257.log -cm_dir out/cov.vdb -cm_name i2c_master_tx_full_intr_test_0105212257
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Jan  5 21:22 2023
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+"../agents/lvc_apb3/lvc_apb_if.sv", 162: rkv_i2c_tb.apb_if.unnamed$$_12, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 167: rkv_i2c_tb.apb_if.unnamed$$_13, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 173: rkv_i2c_tb.apb_if.unnamed$$_14, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 179: rkv_i2c_tb.apb_if.unnamed$$_15, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 184: rkv_i2c_tb.apb_if.unnamed$$_16, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 189: rkv_i2c_tb.apb_if.unnamed$$_17, 0 attempts, 0 match
+"../agents/lvc_apb3/lvc_apb_if.sv", 195: rkv_i2c_tb.apb_if.unnamed$$_18, 0 attempts, 0 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      1.570 seconds;       Data structure size:   9.0Mb
+Thu Jan  5 21:23:12 2023

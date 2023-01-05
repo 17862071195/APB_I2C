@@ -15,7 +15,7 @@ class i2c_master_activity_intr_output_virt_seq extends rkv_i2c_base_virtual_sequ
     vif.wait_apb(10);
 
     `uvm_do_on_with(apb_cfg_seq, p_sequencer.apb_mst_sqr, {
-                    SPEED == 1;
+                    SPEED == 2;
 										IC_10BITADDR_MASTER == 0;
 										IC_TAR == `LVC_I2C_SLAVE0_ADDRESS;
                     IC_FS_SCL_HCNT == 200;

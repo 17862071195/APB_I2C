@@ -13,13 +13,27 @@ virtual class rkv_apb_base_sequence extends uvm_sequence #(lvc_apb_transfer);
   // RGM register field value
   rand int SPEED = -1;
   rand int IC_10BITADDR_MASTER = -1;
+  rand int IC_RESTART_EN = -1;
+  rand int TX_EMPTY_CTRL = -1;
+  rand int MASTER_MODE = -1;
+  rand int IC_SLAVE_DISABLE = -1;
+  rand int SPECIAL = -1;
+  rand int GC_OR_START = -1;
   rand int IC_TAR = -1;
   rand int IC_FS_SCL_HCNT = -1;
   rand int IC_FS_SCL_LCNT = -1;
+  rand int TX_CMD_BLOCK = -1;
+  rand int ABORT = -1;
   rand int ENABLE = -1;
   rand int DAT = -1;
   rand int CMD = -1;
   rand int IC_SAR = -1;
+  rand int RX_TL = -1;
+  rand int TX_TL = -1;
+  rand int M_RESTART_DET = -1;
+  rand int M_START_DET = -1;
+  rand int M_STOP_DET = -1;
+  rand int M_ACTIVITY = -1;
   
   `uvm_declare_p_sequencer(lvc_apb_master_sequencer)
 

@@ -11,6 +11,13 @@
 `include "i2c_master_tx_abrt_intr_virt_seq.sv"
 `include "i2c_master_activity_intr_output_virt_seq.sv"
 `include "i2c_master_tx_empty_intr_virt_seq.sv"
+`include "i2c_master_tx_full_intr_virt_seq.sv"
+`include "i2c_master_rx_full_intr_virt_seq.sv"
+`include "i2c_master_rx_over_intr_virt_seq.sv"
+`include "i2c_master_abrt_10b_rd_norstrt_virt_seq.sv"
+`include "i2c_master_abrt_sbyte_norstrt_virt_seq.sv"
+`include "i2c_master_abrt_txdata_noack_virt_seq.sv"
+`include "i2c_master_abrt_7b_addr_noack_virt_seq.sv"
 
 `endif // RKV_I2C_USER_VIRTUAL_SEQUENCES_SVH
 

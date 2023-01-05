@@ -1,0 +1,187 @@
+{
+    "Modules": {
+        "lvc_apb_pkg": {
+            "nRouts": 164,
+            "start_perf": [
+                14.952391862869263,
+                0.00040900000000000002,
+                0.0,
+                405804,
+                405804,
+                1672915504.782486,
+                31035896603895
+            ],
+            "significant_routs": [
+                [
+                    47,
+                    "F_VCSClass_lvc_apb_pkglvc_apb_transfer_lvc_apb_transfer3a3a__m_uvm_field_automation",
+                    309421220,
+                    29933,
+                    2923
+                ]
+            ],
+            "child_modules": {},
+            "nMops": 13808,
+            "end_perf": [
+                15.438552856445312,
+                0.32042999999999999,
+                0.052624999999999998,
+                407912,
+                407912,
+                31037254559886,
+                -5054199165077824807,
+                0
+            ],
+            "svclass": [
+                "lvc_apb_transfer",
+                35761,
+                3291,
+                11,
+                10,
+                -2289534922778079590,
+                "lvc_apb_config",
+                9605,
+                812,
+                13,
+                12,
+                -3794867484473458917,
+                "lvc_apb_master_monitor",
+                29305,
+                2943,
+                39,
+                14,
+                -3420781040212146760,
+                "lvc_apb_master_monitor::lvc_apb_master_cov_trans",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_apb_master_agent",
+                13513,
+                1358,
+                11,
+                11,
+                -6840367973833334160,
+                "lvc_apb_slave_monitor",
+                26048,
+                2377,
+                30,
+                15,
+                9055945120283371241,
+                "lvc_apb_slave_monitor::lvc_apb_slave_cov_trans",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_apb_slave_agent",
+                13505,
+                1356,
+                11,
+                11,
+                1524002652057370173,
+                "lvc_apb_reg_adapter",
+                13880,
+                1339,
+                12,
+                12,
+                1552519473989812309
+            ],
+            "nQuads": 4093
+        },
+        "std": {
+            "start_perf": [
+                15.438695907592773,
+                0.32055400000000001,
+                0.052644999999999997,
+                407912,
+                407912,
+                1672915505.26879,
+                31037254830348
+            ],
+            "child_modules": {},
+            "end_perf": [
+                15.438763856887817,
+                0.32061400000000001,
+                0.052655,
+                407912,
+                407912,
+                31037255013380,
+                30064771073,
+                0
+            ],
+            "skipped": 1
+        },
+        "rkv_i2c_if_1146083354_12": {
+            "start_perf": [
+                15.438856840133667,
+                0.32061400000000001,
+                0.052747000000000002,
+                407912,
+                407912,
+                1672915505.2689509,
+                31037255282371
+            ],
+            "child_modules": {},
+            "end_perf": [
+                15.438905954360962,
+                0.32061400000000001,
+                0.052796000000000003,
+                407912,
+                407912,
+                31037255397691,
+                30064771073,
+                0
+            ],
+            "skipped": 1
+        }
+    },
+    "reusePaths": {},
+    "CompUnits": {
+        "lvc_apb_pkg_d": {
+            "mode": 4,
+            "mod": "lvc_apb_pkg",
+            "archive": "archive.0/__vcs_msglog_UF52e_4_archive_1.a",
+            "out": "lvc_apb_pkg_d.o",
+            "checksum": 4294967295,
+            "bytes": 476384,
+            "text": 144842,
+            "cls": 141617
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.0/__vcs_msglog_UF52e_4_archive_1.a",
+            "objects": [
+                [
+                    "lvc_apb_pkg_d.o",
+                    476384
+                ]
+            ],
+            "size": 476384
+        }
+    ],
+    "stat": {
+        "cpu_cycles_end": 31037256748003,
+        "ru_self_end": {
+            "ru_majflt": 4,
+            "ru_utime_sec": 0.32061400000000001,
+            "ru_stime_sec": 0.053303999999999997,
+            "ru_minflt": 5214,
+            "ru_maxrss_kb": 165956,
+            "ru_nvcsw": 4,
+            "ru_nivcsw": 25
+        },
+        "ru_childs_end": {
+            "ru_majflt": 0,
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_minflt": 0,
+            "ru_maxrss_kb": 0,
+            "ru_nvcsw": 0,
+            "ru_nivcsw": 0
+        },
+        "peak_mem_kb": 407916
+    }
+}

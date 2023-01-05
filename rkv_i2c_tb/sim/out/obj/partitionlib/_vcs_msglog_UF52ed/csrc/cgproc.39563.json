@@ -1,0 +1,394 @@
+{
+    "Modules": {
+        "...MASTER...": {
+            "end_perf": [
+                27.30705189704895,
+                26.273971,
+                0.87595599999999996,
+                405736,
+                405768,
+                86055595156329,
+                0,
+                0
+            ],
+            "start_perf": [
+                27.303605079650879,
+                26.272006000000001,
+                0.874533,
+                405736,
+                405768,
+                1672498519.2803731,
+                86055583871884
+            ],
+            "child_modules": {
+                "vcs_paramclassrepository_UF52ed": 1,
+                "uvm_pkg": 1,
+                "_vcs_msglog": 1,
+                "pc__vcs_msglog": 1,
+                "lvc_apb_pkg": 1,
+                "rkv_i2c_pkg": 1,
+                "std": 1,
+                "lvc_i2c_pkg": 1
+            },
+            "nQuads": 0,
+            "nRouts": 5,
+            "nMops": 0
+        },
+        "lvc_i2c_pkg": {
+            "end_perf": [
+                41.996342897415161,
+                40.203758000000001,
+                1.5137399999999999,
+                408708,
+                408708,
+                86096628707521,
+                2875367100509148050,
+                0
+            ],
+            "start_perf": [
+                27.351224899291992,
+                26.288114,
+                0.90599700000000005,
+                405736,
+                405768,
+                1672498519.3279929,
+                86055716942486
+            ],
+            "child_modules": {},
+            "nRouts": 1867,
+            "nMops": 217881,
+            "svclass": [
+                "lvc_configuration",
+                12097,
+                964,
+                10,
+                10,
+                2708757170585696712,
+                "lvc_i2c_configuration",
+                670734,
+                68003,
+                20,
+                19,
+                1943104463212659733,
+                "lvc_i2c_agent_configuration",
+                77273,
+                7417,
+                13,
+                13,
+                -1851766196339962603,
+                "lvc_i2c_transaction",
+                323733,
+                32760,
+                13,
+                12,
+                -7274046663751038896,
+                "lvc_i2c_bfm_common",
+                20974,
+                2725,
+                30,
+                16,
+                8711039859241879408,
+                "lvc_i2c_master_transaction",
+                42986,
+                3957,
+                12,
+                11,
+                -2379331327186413632,
+                "lvc_i2c_master_monitor_common",
+                81560,
+                11127,
+                152,
+                15,
+                -9095523992493303917,
+                "lvc_i2c_master_monitor",
+                38603,
+                3627,
+                46,
+                15,
+                -3876254155499913783,
+                "lvc_i2c_master_monitor::lvc_i2c_master_cov_trans",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_i2c_master_driver_callback",
+                8249,
+                554,
+                11,
+                11,
+                843707476457601664,
+                "lvc_i2c_master_driver_common",
+                261783,
+                28606,
+                881,
+                27,
+                -1621738086199275651,
+                "lvc_i2c_master_agent",
+                45555,
+                4284,
+                19,
+                14,
+                -1032320271025885963,
+                "lvc_i2c_slave_transaction",
+                30609,
+                2922,
+                12,
+                11,
+                -4426760780633006683,
+                "lvc_i2c_slave_monitor_common",
+                81332,
+                11091,
+                152,
+                15,
+                6750403892549153797,
+                "lvc_i2c_slave_monitor",
+                39095,
+                3647,
+                48,
+                15,
+                -5991289036018709291,
+                "lvc_i2c_slave_monitor::lvc_i2c_slave_cov_trans",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_i2c_slave_driver_common",
+                105569,
+                13713,
+                282,
+                16,
+                -357358078767413515,
+                "lvc_i2c_slave_agent",
+                46636,
+                4433,
+                19,
+                14,
+                7415185838954543879,
+                "lvc_i2c_system_configuration",
+                119971,
+                12331,
+                23,
+                22,
+                -8799919357542244782,
+                "lvc_i2c_system_env",
+                42860,
+                4298,
+                30,
+                18,
+                -5942760264536073654
+            ],
+            "significant_routs": [
+                [
+                    1572,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_configuration_lvc_i2c_configuration3a3a__m_uvm_field_automation",
+                    10765922496,
+                    522828,
+                    52736
+                ],
+                [
+                    1576,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_configuration_lvc_i2c_configuration3a3ais_valid",
+                    1998711032,
+                    97140,
+                    8137
+                ],
+                [
+                    1589,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_agent_configuration_lvc_i2c_agent_configuration3a3a__m_uvm_field_automation",
+                    838415704,
+                    57268,
+                    5637
+                ],
+                [
+                    1599,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_transaction_lvc_i2c_transaction3a3a__m_uvm_field_automation",
+                    5250505604,
+                    284095,
+                    29330
+                ],
+                [
+                    1602,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_transaction_lvc_i2c_transaction3a3ais_valid",
+                    478553115,
+                    31701,
+                    2685
+                ],
+                [
+                    1620,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_master_transaction_lvc_i2c_master_transaction3a3ais_valid",
+                    660684471,
+                    31806,
+                    2648
+                ],
+                [
+                    1634,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_master_monitor_lvc_i2c_master_monitor3a3a__m_uvm_field_automation",
+                    488771460,
+                    13292,
+                    1396
+                ],
+                [
+                    1665,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_master_agent_lvc_i2c_master_agent3a3a__m_uvm_field_automation",
+                    593797071,
+                    19593,
+                    1996
+                ],
+                [
+                    1667,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_master_agent_lvc_i2c_master_agent3a3abuild_phase",
+                    503698135,
+                    13608,
+                    1399
+                ],
+                [
+                    1677,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_slave_transaction_lvc_i2c_slave_transaction3a3ais_valid",
+                    709401822,
+                    20499,
+                    1848
+                ],
+                [
+                    1691,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_slave_monitor_lvc_i2c_slave_monitor3a3a__m_uvm_field_automation",
+                    477346615,
+                    13292,
+                    1396
+                ],
+                [
+                    1713,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_slave_agent_lvc_i2c_slave_agent3a3a__m_uvm_field_automation",
+                    929665136,
+                    19593,
+                    1996
+                ],
+                [
+                    1715,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_slave_agent_lvc_i2c_slave_agent3a3abuild_phase",
+                    800874447,
+                    14689,
+                    1548
+                ],
+                [
+                    1735,
+                    "F_VCSClass_lvc_i2c_pkglvc_i2c_system_configuration_lvc_i2c_system_configuration3a3a__m_uvm_field_automation",
+                    2725935662,
+                    98366,
+                    10090
+                ]
+            ],
+            "nQuads": 64903
+        },
+        "_vcs_msglog": {
+            "end_perf": [
+                42.003077983856201,
+                40.206549000000003,
+                1.5176859999999999,
+                408708,
+                408732,
+                86096647491701,
+                6505974944744156591,
+                0
+            ],
+            "start_perf": [
+                41.996711015701294,
+                40.204127999999997,
+                1.5137399999999999,
+                408708,
+                408708,
+                1672498533.973479,
+                86096629673173
+            ],
+            "child_modules": {},
+            "nRouts": 10,
+            "nMops": 80,
+            "svclass": [
+                "rkv_i2c_if_1146083354_12_vcs_virt_intf_C",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_i2c_if_1146083354_12_vcs_virt_intf_C",
+                0,
+                0,
+                0,
+                0,
+                0,
+                "lvc_apb_if_1146083354_12_vcs_virt_intf_C",
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "nQuads": 30
+        }
+    },
+    "CompUnits": {
+        "lvc_i2c_pkg_d": {
+            "mod": "lvc_i2c_pkg",
+            "out": "lvc_i2c_pkg_d.o",
+            "text": 2064699,
+            "bytes": 4670738,
+            "cls": 2049619,
+            "checksum": 4294967295,
+            "mode": 4,
+            "archive": "archive.0/__vcs_msglog_UF52e_1_archive_1.a"
+        },
+        "_vcs_msglog_d": {
+            "mod": "_vcs_msglog",
+            "out": "_vcs_msglog_d.o",
+            "text": 735,
+            "bytes": 45780,
+            "checksum": 4294967295,
+            "mode": 4,
+            "archive": "archive.0/__vcs_msglog_UF52e_1_archive_1.a"
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.0/__vcs_msglog_UF52e_1_archive_1.a",
+            "objects": [
+                [
+                    "lvc_i2c_pkg_d.o",
+                    4670738
+                ],
+                [
+                    "_vcs_msglog_d.o",
+                    45780
+                ],
+                [
+                    "SIMB.o",
+                    119940
+                ]
+            ],
+            "size": 4836458
+        }
+    ],
+    "stat": {
+        "ru_self_end": {
+            "ru_utime_sec": 40.336489,
+            "ru_stime_sec": 1.5830229999999998,
+            "ru_maxrss_kb": 228384,
+            "ru_nivcsw": 174,
+            "ru_minflt": 113891,
+            "ru_majflt": 0,
+            "ru_nvcsw": 778
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 45.831814999999999,
+            "ru_stime_sec": 2.5964290000000001,
+            "ru_maxrss_kb": 186232,
+            "ru_nivcsw": 340,
+            "ru_minflt": 74390,
+            "ru_majflt": 2,
+            "ru_nvcsw": 74
+        },
+        "cpu_cycles_end": 86126085322047,
+        "peak_mem_kb": 410280
+    }
+}

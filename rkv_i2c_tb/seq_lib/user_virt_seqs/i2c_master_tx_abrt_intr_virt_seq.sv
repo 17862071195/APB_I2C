@@ -14,7 +14,7 @@ class i2c_master_tx_abrt_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
 		vif.wait_apb(10);
     
     `uvm_do_on_with(apb_cfg_seq, p_sequencer.apb_mst_sqr, {
-                    SPEED == 1;
+                    SPEED == 2;
 										IC_10BITADDR_MASTER == 0;
 										IC_TAR == `LVC_I2C_SLAVE0_ADDRESS;
                     IC_FS_SCL_HCNT == 200;
@@ -38,6 +38,7 @@ class i2c_master_tx_abrt_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
     if(vif.get_intr(IC_TX_ABRT_INTR_ID) === 1) `uvm_info("SUCCESS", "TX_ABRT test successfully!", UVM_LOW)
     else `uvm_error("INTRERR", "interrupt output IC_TX_ABRT_INTR_ID is not high!") 
     
+    `uvm_info("MMM",$sformatf("%b",rgm.IC_TX_ABRT_SOURCE.get()), UVM_LOW)
     `uvm_do_on_with(apb_intr_clear_seq, p_sequencer.apb_mst_sqr, {
                     intr_id == IC_TX_ABRT_INTR_ID;}) 
     `uvm_do_on(apb_wait_empty_seq, p_sequencer.apb_mst_sqr)

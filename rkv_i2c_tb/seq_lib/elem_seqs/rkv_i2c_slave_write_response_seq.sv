@@ -20,11 +20,13 @@ class rkv_i2c_slave_write_response_seq extends rkv_i2c_slave_base_sequence;
     `uvm_info("body", "Entering...", UVM_HIGH)
     super.body();
 
-    `uvm_do_with(req,  
-                {local::nack_addr >= 0 -> nack_addr == local::nack_addr;
-                 local::nack_data >= 0 -> nack_data == local::nack_data;
-                 local::nack_addr_count >= 0-> nack_addr_count == local::nack_addr_count;
-                })
+    `uvm_create(req)
+    req.reasonable_nack_addr.constraint_mode(0);
+    `uvm_rand_send_with(req,  
+                        {local::nack_addr >= 0 -> nack_addr == local::nack_addr;
+                         local::nack_data >= 0 -> nack_data == local::nack_data;
+                         local::nack_addr_count >= 0-> nack_addr_count == local::nack_addr_count;
+                        })
 
     if(cfg.enable_put_response == 1) get_response(rsp);
 
@@ -34,3 +36,4 @@ class rkv_i2c_slave_write_response_seq extends rkv_i2c_slave_base_sequence;
 endclass
 
 `endif // RKV_I2C_SLAVE_WRITE_RESPONSE_SEQ_SV
+

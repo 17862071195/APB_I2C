@@ -1,0 +1,491 @@
+{
+    "stat": {
+        "ru_self_end": {
+            "ru_utime_sec": 1.9832290000000001,
+            "ru_nvcsw": 769,
+            "ru_stime_sec": 0.23838200000000001,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 178220,
+            "ru_nivcsw": 41,
+            "ru_minflt": 75331
+        },
+        "peak_mem_kb": 375464,
+        "ru_childs_end": {
+            "ru_utime_sec": 0.898339,
+            "ru_nvcsw": 38,
+            "ru_stime_sec": 0.104269,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 77964,
+            "ru_nivcsw": 31,
+            "ru_minflt": 19747
+        },
+        "cpu_cycles_end": 61630178511058
+    },
+    "reusePaths": {},
+    "Modules": {
+        "...MASTER...": {
+            "nMops": 0,
+            "start_perf": [
+                1.7254509925842285,
+                1.472046,
+                0.20008400000000001,
+                307780,
+                375464,
+                1672926455.620146,
+                61627432689146
+            ],
+            "nRouts": 5,
+            "child_modules": {
+                "lvc_apb_pkg": 1,
+                "rkv_i2c_tb": 1,
+                "uvm_pkg": 1,
+                "lvc_i2c_pkg": 1,
+                "vcs_paramclassrepository_67wvne": 1,
+                "std": 1,
+                "pc_rkv_i2c_tb": 1,
+                "rkv_i2c_pkg": 1,
+                "vcs_paramclassrepository_pc_skel": 1
+            },
+            "end_perf": [
+                1.7262740135192871,
+                1.4728680000000001,
+                0.20008400000000001,
+                307780,
+                375464,
+                61627435008624,
+                0,
+                0
+            ],
+            "nQuads": 0
+        },
+        "std": {
+            "start_perf": [
+                2.2833549976348877,
+                1.9595449999999999,
+                0.23144200000000001,
+                309756,
+                375464,
+                1672926456.17805,
+                61628991189976
+            ],
+            "child_modules": {},
+            "skipped": 1,
+            "end_perf": [
+                2.2833960056304932,
+                1.9595820000000002,
+                0.23144600000000001,
+                309756,
+                375464,
+                61628991304994,
+                128849018881,
+                0
+            ]
+        },
+        "rkv_DW_apb_i2c_intctl_67wvne": {
+            "nMops": 8684,
+            "start_perf": [
+                1.8972909450531006,
+                1.633059,
+                0.21088100000000001,
+                309756,
+                375464,
+                1672926455.791986,
+                61627912687165
+            ],
+            "nRouts": 621,
+            "child_modules": {},
+            "end_perf": [
+                1.9747250080108643,
+                1.706529,
+                0.21484300000000001,
+                309756,
+                375464,
+                61628129096306,
+                -6967353905039771324,
+                0
+            ],
+            "nQuads": 4380
+        },
+        "rkv_DW_apb_i2c_regfile_67wvne": {
+            "nMops": 16211,
+            "start_perf": [
+                1.7281348705291748,
+                1.473754,
+                0.20105899999999999,
+                307780,
+                375464,
+                1672926455.6228299,
+                61627440288789
+            ],
+            "nRouts": 570,
+            "child_modules": {},
+            "end_perf": [
+                1.8971860408782959,
+                1.632965,
+                0.210869,
+                309756,
+                375464,
+                61627912534896,
+                7127687028577549672,
+                0
+            ],
+            "nQuads": 5829
+        },
+        "rkv_DW_apb_i2c_toggle_67wvne": {
+            "nMops": 4936,
+            "start_perf": [
+                1.9748120307922363,
+                1.706609,
+                0.21485299999999999,
+                309756,
+                375464,
+                1672926455.8695071,
+                61628129232314
+            ],
+            "nRouts": 424,
+            "child_modules": {},
+            "end_perf": [
+                2.0141310691833496,
+                1.7450639999999999,
+                0.21571599999999999,
+                309756,
+                375464,
+                61628239173625,
+                -6963765184985220680,
+                0
+            ],
+            "nQuads": 2710
+        },
+        "rkv_DW_apb_i2c_bcm57_0000_67wvne": {
+            "nMops": 536,
+            "start_perf": [
+                2.2698118686676025,
+                1.948996,
+                0.22844600000000001,
+                309756,
+                375464,
+                1672926456.1645069,
+                61628953379078
+            ],
+            "nRouts": 34,
+            "child_modules": {},
+            "end_perf": [
+                2.2831509113311768,
+                1.9593609999999999,
+                0.23141999999999999,
+                309756,
+                375464,
+                61628990755255,
+                6887611601198993868,
+                0
+            ],
+            "nQuads": 198
+        },
+        "rkv_i2c_pkg": {
+            "start_perf": [
+                2.2835178375244141,
+                1.9596900000000002,
+                0.231459,
+                309756,
+                375464,
+                1672926456.1782129,
+                61628991641545
+            ],
+            "child_modules": {},
+            "skipped": 1,
+            "end_perf": [
+                2.2835569381713867,
+                1.9597259999999999,
+                0.231463,
+                309756,
+                375464,
+                61628991873403,
+                128849018881,
+                0
+            ]
+        },
+        "rkv_DW_apb_i2c_rx_shift_67wvne": {
+            "nMops": 4487,
+            "start_perf": [
+                2.0142228603363037,
+                1.7451460000000001,
+                0.215726,
+                309756,
+                375464,
+                1672926455.9089179,
+                61628239337532
+            ],
+            "nRouts": 263,
+            "child_modules": {},
+            "end_perf": [
+                2.0780160427093506,
+                1.808063,
+                0.21660099999999999,
+                309756,
+                375464,
+                61628417690095,
+                -1218534482449402457,
+                0
+            ],
+            "nQuads": 2162
+        },
+        "rkv_DW_apb_i2c_fifo_67wvne": {
+            "nMops": 2122,
+            "start_perf": [
+                2.1964428424835205,
+                1.909505,
+                0.223441,
+                309756,
+                375464,
+                1672926456.0911379,
+                61628748429146
+            ],
+            "nRouts": 134,
+            "child_modules": {
+                "rkv_DW_apb_i2c_bcm06_0000_67wvne": 2
+            },
+            "nQuads": 873,
+            "significant_routs": [
+                [
+                    91,
+                    "R_VCSgd_rkv_DW_apb_i2c_fifo_67wvne_5b",
+                    29428982,
+                    107,
+                    19
+                ],
+                [
+                    130,
+                    "M_VCSgd_rkv_DW_apb_i2c_fifo_67wvne",
+                    25330739,
+                    264,
+                    0
+                ]
+            ],
+            "end_perf": [
+                2.269705057144165,
+                1.9488989999999999,
+                0.228434,
+                309756,
+                375464,
+                61628953180405,
+                2533605508328044670,
+                0
+            ]
+        },
+        "rkv_DW_apb_i2c_clk_gen_67wvne": {
+            "nMops": 3955,
+            "start_perf": [
+                2.0781219005584717,
+                1.8081589999999998,
+                0.216613,
+                309756,
+                375464,
+                1672926455.9728169,
+                61628417889576
+            ],
+            "nRouts": 213,
+            "child_modules": {},
+            "nQuads": 1596,
+            "significant_routs": [
+                [
+                    76,
+                    "R_VCSgd_rkv_DW_apb_i2c_clk_gen_67wvne_4c",
+                    44639188,
+                    950,
+                    79
+                ],
+                [
+                    143,
+                    "R_VCSgd_rkv_DW_apb_i2c_clk_gen_67wvne_8f",
+                    29199796,
+                    94,
+                    11
+                ]
+            ],
+            "end_perf": [
+                2.1963050365447998,
+                1.9093800000000001,
+                0.22342699999999999,
+                309756,
+                375464,
+                61628748209240,
+                7086792544708052155,
+                0
+            ]
+        },
+        "vcs_paramclassrepository_pc_skel": {
+            "start_perf": [
+                2.2832598686218262,
+                1.95946,
+                0.231432,
+                309756,
+                375464,
+                1672926456.1779549,
+                61628990937016
+            ],
+            "child_modules": {},
+            "skipped": 1,
+            "end_perf": [
+                2.2833099365234375,
+                1.9595039999999999,
+                0.231437,
+                309756,
+                375464,
+                61628991065728,
+                128849018881,
+                0
+            ]
+        },
+        "lvc_apb_pkg": {
+            "start_perf": [
+                2.283437967300415,
+                1.959619,
+                0.23145099999999999,
+                309756,
+                375464,
+                1672926456.178133,
+                61628991419306
+            ],
+            "child_modules": {},
+            "skipped": 1,
+            "end_perf": [
+                2.2834780216217041,
+                1.959654,
+                0.23145499999999999,
+                309756,
+                375464,
+                61628991530592,
+                128849018881,
+                0
+            ]
+        },
+        "lvc_i2c_if_1146083354_12": {
+            "start_perf": [
+                2.2836458683013916,
+                1.9597259999999999,
+                0.23155100000000001,
+                309756,
+                375464,
+                1672926456.1783409,
+                61628992013993
+            ],
+            "child_modules": {},
+            "skipped": 1,
+            "end_perf": [
+                2.2836930751800537,
+                1.9597259999999999,
+                0.231598,
+                309756,
+                375464,
+                61628992130304,
+                128849018881,
+                0
+            ]
+        }
+    },
+    "CompUnits": {
+        "rkv_DW_apb_i2c_intctl_67wvne_d": {
+            "bytes": 157084,
+            "mod": "rkv_DW_apb_i2c_intctl_67wvne",
+            "out": "rkv_DW_apb_i2c_intctl_67wvne_d.o",
+            "text": 78821,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_regfile_67wvne_d": {
+            "bytes": 195648,
+            "mod": "rkv_DW_apb_i2c_regfile_67wvne",
+            "out": "rkv_DW_apb_i2c_regfile_67wvne_d.o",
+            "text": 125019,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_clk_gen_67wvne_d": {
+            "bytes": 64944,
+            "mod": "rkv_DW_apb_i2c_clk_gen_67wvne",
+            "out": "rkv_DW_apb_i2c_clk_gen_67wvne_d.o",
+            "text": 35531,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_toggle_67wvne_d": {
+            "bytes": 88322,
+            "mod": "rkv_DW_apb_i2c_toggle_67wvne",
+            "out": "rkv_DW_apb_i2c_toggle_67wvne_d.o",
+            "text": 44935,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_rx_shift_67wvne_d": {
+            "bytes": 73792,
+            "mod": "rkv_DW_apb_i2c_rx_shift_67wvne",
+            "out": "rkv_DW_apb_i2c_rx_shift_67wvne_d.o",
+            "text": 41739,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_fifo_67wvne_d": {
+            "bytes": 42068,
+            "mod": "rkv_DW_apb_i2c_fifo_67wvne",
+            "out": "rkv_DW_apb_i2c_fifo_67wvne_d.o",
+            "text": 17566,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "rkv_DW_apb_i2c_bcm57_0000_67wvne_d": {
+            "bytes": 16848,
+            "mod": "rkv_DW_apb_i2c_bcm57_0000_67wvne",
+            "out": "rkv_DW_apb_i2c_bcm57_0000_67wvne_d.o",
+            "text": 4591,
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.1/_rkv_i2c_tb_67wvn_1_archive_1.a",
+            "objects": [
+                [
+                    "rkv_DW_apb_i2c_regfile_67wvne_d.o",
+                    195648
+                ],
+                [
+                    "rkv_DW_apb_i2c_intctl_67wvne_d.o",
+                    157084
+                ],
+                [
+                    "rkv_DW_apb_i2c_toggle_67wvne_d.o",
+                    88322
+                ],
+                [
+                    "rkv_DW_apb_i2c_rx_shift_67wvne_d.o",
+                    73792
+                ],
+                [
+                    "rkv_DW_apb_i2c_clk_gen_67wvne_d.o",
+                    64944
+                ],
+                [
+                    "rkv_DW_apb_i2c_fifo_67wvne_d.o",
+                    42068
+                ],
+                [
+                    "rkv_DW_apb_i2c_bcm57_0000_67wvne_d.o",
+                    16848
+                ],
+                [
+                    "SIMB.o",
+                    117928
+                ]
+            ],
+            "size": 756634
+        }
+    ]
+}
