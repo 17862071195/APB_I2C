@@ -1,0 +1,8 @@
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_sda_control_cg_test_58.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/master_address_cg_test_32.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_abrt_sbyte_norstrt_test_0.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_hs_scl_cnt_test_59.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_ss_scl_cnt_test_22.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_activity_intr_output_test_85.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_fs_scl_cnt_test_10.ucdb
+/home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan07-22_58/i2c_master_abrt_txdata_noack_test_14.ucdb

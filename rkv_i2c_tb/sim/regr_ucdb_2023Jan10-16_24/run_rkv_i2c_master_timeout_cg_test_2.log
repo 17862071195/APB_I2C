@@ -1,0 +1,98 @@
+# vsim -onfinish stop -coverage -sv_seed 2 "+UVM_TESTNAME=rkv_i2c_master_timeout_cg_test" -l regr_ucdb_2023Jan10-16_24/run_rkv_i2c_master_timeout_cg_test_2.log work.rkv_i2c_tb 
+# Start time: 16:29:25 on Jan 10,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.rkv_i2c_if(fast)
+# Loading work.lvc_i2c_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.lvc_i2c_pkg(fast)
+# Loading work.lvc_apb_if(fast)
+# Loading work.lvc_apb_pkg(fast)
+# Loading work.rkv_i2c_pkg(fast)
+# Loading work.rkv_i2c_tb(fast)
+# Loading work.rkv_DW_apb_i2c(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3838) Variable '/rkv_i2c_tb/apb_if/prdata' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv Line: 27
+# ** Warning: (vsim-3838) Variable '/rkv_i2c_tb/apb_if/pready' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv Line: 28
+# ** Warning: (vsim-3838) Variable '/rkv_i2c_tb/apb_if/pslverr' written by continuous and procedural assignments. 
+# One of the assignments is implicit. See ../tb/rkv_i2c_tb.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb/apb_if File: ../agents/lvc_apb3/lvc_apb_if.sv Line: 29
+# Loading /opt/mentor/questasim10.7/questasim/uvm-1.1d/linux/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable0_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_enable1_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ack_general_call_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_master_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_hs_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_fs_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_ss_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_mst_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_tx_empty_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_10bit_slv_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_rstrt_en_inv_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_slave_en_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_p_det_ifaddr_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_sync.U_DW_apb_i2c_bcm21_p2icl_ic_sda_hold_icsyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_source_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_tx_abrt_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_done_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_ic_rd_req_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_p_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_s_det_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_rx_gen_call_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_clr_leftover_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_set_tx_empty_en_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_mst_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_activity_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_rx_aborted_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_intctl.U_DW_apb_i2c_bcm21_ic2pl_slv_fifo_filled_and_flushed_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_tx_pop_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# Information: *** Instance rkv_i2c_tb.dut.U_DW_apb_i2c_fifo.U_DW_apb_i2c_bcm21_ic2pl_rx_push_flg_psyzr module is using the <Double Register Synchronizer (1)> Clock Domain Crossing Method ***
+# UVM_WARNING @ 0: reporter [BDTYP] Cannot create a component of type 'rkv_i2c_master_timeout_cg_test' because it is not registered with the factory.
+# UVM_FATAL @ 0: reporter [INVTST] Requested test from command line +UVM_TESTNAME=rkv_i2c_master_timeout_cg_test not found.
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    2
+# UVM_WARNING :    1
+# UVM_ERROR :    0
+# UVM_FATAL :    1
+# ** Report counts by id
+# [BDTYP]     1
+# [INVTST]     1
+# [Questa UVM]     2
+# ** Note: $finish    : /opt/mentor/questasim10.7/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
+#    Time: 0 ps  Iteration: 0  Instance: /rkv_i2c_tb
+# Break in Function uvm_pkg/uvm_report_object::die at /opt/mentor/questasim10.7/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh line 292
+# Stopped at /opt/mentor/questasim10.7/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh line 292
+# End time: 16:29:39 on Jan 10,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 4
+# Simulating i2c_master_abrt_10b_rd_norstrt_test
+# 52 +UVM_TESTNAME=i2c_master_abrt_10b_rd_norstrt_test -l regr_ucdb_2023Jan10-16_24/run_i2c_master_abrt_10b_rd_norstrt_test_52.log

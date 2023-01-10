@@ -32,7 +32,7 @@ class rkv_i2c_cgm extends uvm_component;
 	  }
 	  TAR_BITS7 : coverpoint TorS_addr[6:0] iff(field == "TAR") {
 		  wildcard bins range1 = {7'b1xxxxxx};
-		  wildcard bins range2 = {7'b01xxxxxx};
+		  wildcard bins range2 = {7'b0xxxxxx};
 	  }
 	  SAR_BITS10 : coverpoint TorS_addr[9:7] iff(field=="SAR") {
 		  wildcard bins range1 = {3'b1xx};

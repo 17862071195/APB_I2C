@@ -11,6 +11,8 @@ all :		_VCSgd_R4kEp_1.db \
 	_VCSgd_xyBr7c_1.db \
 	_VCSgd_hDsZhd_1.db \
 	_VCSgd_IAaufb_1.db \
+	_VCSgd_bE2ihb_1.db \
+	_VCSgd_ZjhH4_1.db \
 	_VCSgd_19inp_1.db \
 	_VCSgd_7eaHK_1.db \
 	_VCSgd_ZVUWMd_1.db \
@@ -36,8 +38,6 @@ all :		_VCSgd_R4kEp_1.db \
 	_VCSgd_0n9Sne_1.db \
 	_VCSgd_IGJJBb_1.db \
 	_VCSgd_xZwqBb_1.db \
-	_VCSgd_bE2ihb_1.db \
-	_VCSgd_ZjhH4_1.db \
 
 
 
@@ -75,6 +75,14 @@ _VCSgd_hDsZhd_1.db :	../agents/lvc_i2c/lvc_i2c_if.sv
 
 _VCSgd_IAaufb_1.db :	../agents/lvc_apb3/lvc_apb_if.sv 
 		${VLOGAN}  ${VLOGAN_OPT} ../agents/lvc_apb3/lvc_apb_if.sv
+
+
+_VCSgd_bE2ihb_1.db :	/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
+
+
+_VCSgd_ZjhH4_1.db :	/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 
 
 _VCSgd_19inp_1.db :	../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_bcm57.v 
@@ -175,13 +183,5 @@ _VCSgd_IGJJBb_1.db :	../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c_dma.v
 
 _VCSgd_xZwqBb_1.db :	../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c.v 
 		${VLOGAN}  ${VLOGAN_OPT} ../../rkv_dw_apb_i2c/src/rkv_DW_apb_i2c.v
-
-
-_VCSgd_bE2ihb_1.db :	/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv 
-		${VLOGAN}  ${VLOGAN_OPT} /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
-
-
-_VCSgd_ZjhH4_1.db :	/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv 
-		${VLOGAN}  ${VLOGAN_OPT} /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 
 

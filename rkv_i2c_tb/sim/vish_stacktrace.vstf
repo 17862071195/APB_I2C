@@ -1,0 +1,10 @@
+# Current time Sun Jan  8 20:35:01 2023
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linux"
+# 0    0xf73a6125: 'Itcl_ReleaseData + 0x55' in '/opt/mentor/questasim10.7/questasim/bin/../linux/itcl3.4/libitcl3.4.so'
+# 1    0x09a0e7eb: '<unknown (@0x9a0e7eb)>'
+# End of Stack Trace
+

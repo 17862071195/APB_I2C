@@ -1,90 +1,99 @@
-`ifndef MASTER_ADDRESS_CG_VIRT_SEQ_SV
-`define MASTER_ADDRESS_CG_VIRT_SEQ_SV
-	class master_address_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
-		bit [9:0] address[] = {10'b1001110011, `LVC_I2C_SLAVE0_ADDRESS, 10'b0001110011, 10'b0110110011 };
-		int times_error_addressing = 0;
-		`uvm_object_utils(master_address_cg_virt_seq)
-		
-		function new(string name="master_address_cg_virt_seq");
-			super.new(name);
-			
-		endfunction
-		
-		virtual task body();
-			`uvm_info(get_type_name(),"=====================STARTED=====================",UVM_LOW)
-			super.body();
-			vif.wait_rstn_release();
-			vif.wait_apb(10);
-			
-			//configurate HCNT LCNT SPEED of i2c ip 
-			`uvm_do_on_with(apb_cfg_seq, p_sequencer.apb_mst_sqr,
-											{SPEED == 2;
-											 IC_FS_SCL_HCNT == 200;
-											 IC_FS_SCL_LCNT == 200;})
-			//cfg.i2c_cfg.slave_cfg[0].enable_10bit_addr = 1; 
-			
-			for(int i=1; i<2; i++) begin
-				//configurate 10bites addressing model of i2c ip and vip 
-				`uvm_do_on_with(apb_cfg_seq, p_sequencer.apb_mst_sqr, 
-											  {IC_10BITADDR_MASTER == i;})				
-				if(i==1) cfg.i2c_cfg.slave_cfg[0].enable_10bit_addr = 1; 
-				if(i==0) cfg.i2c_cfg.slave_cfg[0].enable_10bit_addr = 0;
-				
-				foreach(address[j]) begin
-					//configurate address of ip master and vip slave
-					cfg.i2c_cfg.slave_cfg[0].slave_address = address[j];
-					env.i2c_slv.reconfigure_via_task(cfg.i2c_cfg.slave_cfg[0]);           //refresh slave cfg
-					`uvm_do_on_with(apb_addr_check_seq, p_sequencer.apb_mst_sqr, {ADDR == address[j];})			
-					`uvm_do_on_with(apb_write_packet_seq, p_sequencer.apb_mst_sqr, {
-													packet.size() == 1;
-													packet[0] == 8'b11110001;})
-					`uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)
-					
-					`uvm_do_on_with(apb_addr_check_seq, p_sequencer.apb_mst_sqr, {ADDR == address[j]+1;})
-					`uvm_do_on_with(apb_write_packet_seq, p_sequencer.apb_mst_sqr,{
-													packet.size() == 1;
-													packet[0] == 8'b11110010;
-					})
-					tx_abrt_check(this.times_error_addressing);
-        	rgm.IC_ENABLE.ENABLE.set(0);
-        	rgm.IC_ENABLE.update(status);
-        	#10us;
-				end
-				
-				if(i==1)begin
-					if(times_error_addressing == 4) 
-						`uvm_info(get_type_name(), "Pass test of Addressing correct TAR in the 10bits addressing mode!", UVM_LOW)
-					else
-						`uvm_error(get_type_name(),"NOT Pass test of Addressing correct TAR in the 10bits addressing mode!")
-				end
-				else if(i==0)begin
-					if(times_error_addressing == 4) 
-						`uvm_info(get_type_name(), "Pass test of Addressing correct TAR in the 7bits addressing mode!", UVM_LOW)
-					else
-						`uvm_error(get_type_name(),"NOT Pass test of Addressing correct TAR in the 7bits addressing mode!")
-				end
-				times_error_addressing = 0;
-			end
-			#20us;
-			//`uvm_do_on_with()
-			`uvm_info(get_type_name(),"=================== =FINIkSHED====================",UVM_LOW)
-		endtask
-		
-		task tx_abrt_check(ref int times);
-			while(1) begin
-				@(posedge vif.i2c_clk);
-				if(vif.intr[3] == 1) begin
-					//rgm.IC_TX_ABRT_SOURCE.mirror(status);
-					//if(rgm.IC_TX_ABRT_SOURCE.ABRT_USER_ABRT.get()) begin
-						times++;
-						`uvm_do_on_with(apb_intr_clear_seq, p_sequencer.apb_mst_sqr, 
-							              {intr_id == IC_TX_ABRT_INTR_ID;})
-						break;
-					//end 
-				end 
-			end 
-		endtask
-		
-	endclass
 
-`endif //master_address_cg_virt_seq_sv
+vsim -onfinish stop -cover -sv_seed 21 +UVM_TESTNAME=i2c_master_tx_abrt_intr_test -l  work.rkv_i2c_tb
+regr_ucdb_${timetag}/run_${testname}_${SEED}.log
+
+
+
+
+
+#======================================#
+# TCL script for a mini regression     #
+#======================================#
+
+#======确保仿真把所有test跑完=========#
+#当仿真过程出现error或break时会执行resume命令（questasim）继续往下执行
+onbreak resume
+onerror resume
+
+#设置环境变量，在complist.f文件中会用到
+# set environment variables
+setenv DUT_SRC ../../rkv_dw_apb_i2c
+setenv TB_SRC .
+
+set INCDIR "+incdir+../../rkv_dw_apb_i2c/src \
+					  +incdir+../agents/lvc_apb3 \
+					  +incdir+../agents/lvc_i2c \
+					  +incdir+../cfg \
+					  +incdir+../cov \
+					  +incdir+../reg \
+					  +incdir+../env \
+					  +incdir+../seq_lib \
+					  +incdir+../seq_lib/elem_seqs \
+					  +incdir+../seq_lib/user_elem_seqs \
+					  +incdir+../seq_lib/user_virt_seqs \
+					  +incdir+../tests/user_tests \
+					  +incdir+../tests "
+
+set VCOMP "vlog -timescale=1ns/1ps -l comp.log $INCDIR"
+
+
+# clean the environment and remove trash files
+set delfiles [glob work *.log *.ucdb sim.list]
+
+file delete -force {*}$delfiles
+
+# compile the design and dut with a filelist
+vlib work
+eval $VCOMP -f  rkv_i2c.flist
+eval $VCOMP -sv ../agents/lvc_apb3/lvc_apb_if.sv 
+eval $VCOMP -sv ../agents/lvc_apb3/lvc_apb_pkg.sv 
+eval $VCOMP -sv ../agents/lvc_i2c/lvc_i2c_if.sv 
+eval $VCOMP -sv ../agents/lvc_i2c/lvc_i2c_pkg.sv 
+eval $VCOMP -sv ../env/rkv_i2c_pkg.sv 
+eval $VCOMP -sv ../tb/rkv_i2c_if.sv 
+eval $VCOMP -sv ../tb/rkv_i2c_tb.sv 
+
+#prepare simrun folder
+set timetag [clock format [clock seconds] -format "%Y%b%d-%H_%M"]
+file mkdir regr_ucdb_${timetag}
+
+# call UVM tests
+set TestSets { {master_address_cg_test 1} \
+               {i2c_master_ss_scl_cnt_test 1} \
+               {i2c_master_fs_scl_cnt_test 1} \
+               {i2c_master_hs_scl_cnt_test 1} \
+               {i2c_master_sda_control_cg_test 1} \
+               {i2c_master_enabled_cg_test 1} \
+               {i2c_master_tx_abrt_intr_test 1} \
+               {i2c_master_activity_intr_output_test 1} \
+               {i2c_master_tx_empty_intr_test 1} \
+               {i2c_master_tx_full_intr_test 1} \
+               {i2c_master_rx_full_intr_test 1} \
+               {i2c_master_rx_over_intr_test 1} \
+               {i2c_master_activity_intr_output_test 1} \
+               {i2c_master_abrt_10b_rd_norstrt_test 1} \
+               {i2c_master_abrt_sbyte_norstrt_test 1} \
+               {i2c_master_abrt_txdata_noack_test 1} \
+               {i2c_master_abrt_7b_addr_noack_test 1} \
+             }
+set VERB UVM_HIGH
+foreach testset $TestSets {
+  set testname [lindex $testset 0]
+  set testsetnum [lindex $testset 1]
+  for {set loop 0} {$loop < $testsetnum} {incr loop 1} {
+    set SEED [expr int(rand()*100)]
+    echo Simulating $testname
+    echo $SEED +UVM_TESTNAME=$testname -l regr_ucdb_${timetag}/run_${testname}_${SEED}.log 
+    vsim -onfinish stop -cover -sv_seed $SEED \
+         +UVM_TESTNAME=$testname -l regr_ucdb_${timetag}/run_${testname}_${SEED}.log work.rkv_i2c_tb
+    run -all
+    coverage save regr_ucdb_${timetag}/${testname}_${SEED}.ucdb
+    quit -sim
+  }
+}
+
+#merge the ucdb per test
+vcover merge -testassociated regr_ucdb_${timetag}/regr_${timetag}.ucdb ../doc/questa_vplan.ucdb {*}[glob regr_ucdb_${timetag}/*.ucdb]
+#vsim work.rkv_i2c_tb -sv_seed $SEED +UVM_TESTNAME=$TEST +UVM_VERBOSITY=$VERB -l sim.log
+
+quit -f
