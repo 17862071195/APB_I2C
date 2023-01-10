@@ -3,9 +3,7 @@
 
 	class master_address_cg_test extends rkv_i2c_base_test;
 		`uvm_component_utils(master_address_cg_test)
-		
-		master_address_cg_virt_seq seq;
-		
+				
 		function new(string name="master_address_cg_test", uvm_component parent);
 			super.new(name, parent);
 			
@@ -17,7 +15,7 @@
 		endfunction
 		
 		task run_phase(uvm_phase phase);
-			seq = master_address_cg_virt_seq::type_id::create("seq");
+			master_address_cg_virt_seq seq = master_address_cg_virt_seq::type_id::create("seq");
 			phase.raise_objection(this);
 			`uvm_info("SEQ", "sequence starting", UVM_LOW)
 			seq.start(env.sqr);
