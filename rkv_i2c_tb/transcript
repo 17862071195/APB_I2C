@@ -59,3 +59,10 @@ add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan
 coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
 # coverage read -dataset regr_2023Jan11_23_351 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
 # /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb opened as coverage dataset "regr_2023Jan11_23_351"
+add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan10-22_57/regr_2023Jan10-22_57.ucdb
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan10-22_57/regr_2023Jan10-22_57.ucdb
+# coverage read -dataset regr_2023Jan10_22_57 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan10-22_57/regr_2023Jan10-22_57.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan10-22_57/regr_2023Jan10-22_57.ucdb opened as coverage dataset "regr_2023Jan10_22_57"
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
+# coverage read -dataset regr_2023Jan11_23_352 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb opened as coverage dataset "regr_2023Jan11_23_352"
