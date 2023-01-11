@@ -18,6 +18,7 @@
 	`include "i2c_master_abrt_sbyte_norstrt_test.sv"
 	`include "i2c_master_abrt_txdata_noack_test.sv"
 	`include "i2c_master_abrt_7b_addr_noack_test.sv"
+	`include "i2c_master_timeout_cg_test.sv"
 
 `endif // RKV_I2C_USER_TESTS_SVH
 

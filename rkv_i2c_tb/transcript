@@ -12,7 +12,50 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_7b_addr_noack_test_68.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_10b_rd_norstrt_test_51.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_sbyte_norstrt_test_46.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_txdata_noack_test_54.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_activity_intr_output_test_28.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_enabled_cg_test_38.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_fs_cnt_test_75.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_hs_cnt_test_53.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_full_intr_test_64.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_over_intr_test_35.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_sda_control_cg_test_40.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_ss_cnt_test_81.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_timeout_cg_test_74.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_abrt_intr_test_11.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_empty_intr_test_4.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_full_intr_test_47.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/master_address_cg_test_52.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_interrupt_test_24.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_read_packet_test_49.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_write_packet_test_93.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_quick_reg_access_test_53.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_access_test_41.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_bit_bash_test_95.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_hw_reset_test_6.ucdb
 add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb
-coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb
-# coverage read -dataset questa_vplan /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb
-# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb opened as coverage dataset "questa_vplan"
+vcover merge -stats=none -strip 0 -totals regr_2023Jan11-23_35.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_7b_addr_noack_test_68.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_10b_rd_norstrt_test_51.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_sbyte_norstrt_test_46.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_txdata_noack_test_54.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_activity_intr_output_test_28.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_enabled_cg_test_38.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_fs_cnt_test_75.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_hs_cnt_test_53.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_full_intr_test_64.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_over_intr_test_35.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_sda_control_cg_test_40.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_ss_cnt_test_81.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_timeout_cg_test_74.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_abrt_intr_test_11.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_empty_intr_test_4.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_full_intr_test_47.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/master_address_cg_test_52.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_interrupt_test_24.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_read_packet_test_49.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_write_packet_test_93.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_quick_reg_access_test_53.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_access_test_41.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_bit_bash_test_95.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_hw_reset_test_6.ucdb /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb
+# Merge in Process......
+# 
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_7b_addr_noack_test_68.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_10b_rd_norstrt_test_51.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_sbyte_norstrt_test_46.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_abrt_txdata_noack_test_54.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_activity_intr_output_test_28.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_enabled_cg_test_38.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_fs_cnt_test_75.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_hs_cnt_test_53.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_full_intr_test_64.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_rx_over_intr_test_35.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_sda_control_cg_test_40.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_ss_cnt_test_81.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_timeout_cg_test_74.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_abrt_intr_test_11.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_empty_intr_test_4.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/i2c_master_tx_full_intr_test_47.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/master_address_cg_test_52.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_interrupt_test_24.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_read_packet_test_49.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_master_directed_write_packet_test_93.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_quick_reg_access_test_53.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_access_test_41.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_bit_bash_test_95.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/rkv_i2c_reg_hw_reset_test_6.ucdb
+# Merging file /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/doc/questa_vplan.ucdb
+# Writing merged result to regr_2023Jan11-23_35.ucdb
+# 
+# Applying tag commands ...
+# ===== Testplan item: /Testplan/test status
+# (Tag command: -tagname Testplan.8 -testrecord rkv_i2c_master_start_byte_test_* )
+# Warning: Potential test record "rkv_i2c_master_start_byte_test_*" created!
+# ===== Testplan item: /Testplan/test status
+# (Tag command: -tagname Testplan.8 -testrecord rkv_i2c_master_hs_master_code_test_* )
+# Warning: Potential test record "rkv_i2c_master_hs_master_code_test_*" created!
+# All tags are applied successfully.
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/regr_2023Jan11-23_35.ucdb
+# coverage read -dataset regr_2023Jan11_23_35 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/regr_2023Jan11-23_35.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/regr_2023Jan11-23_35.ucdb opened as coverage dataset "regr_2023Jan11_23_35"
+add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
+# coverage read -dataset regr_2023Jan11_23_351 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan11-23_35/regr_2023Jan11-23_35.ucdb opened as coverage dataset "regr_2023Jan11_23_351"

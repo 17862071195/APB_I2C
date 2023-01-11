@@ -7,6 +7,7 @@ class rkv_i2c_config extends uvm_object;
   lvc_i2c_system_configuration i2c_cfg;
   ral_block_rkv_i2c rgm;
   virtual rkv_i2c_if vif;
+  virtual lvc_apb_if apb_vif;
 
   bit master_scoreboard_enable = 1;
 	bit coverage_model_ebable = 1;

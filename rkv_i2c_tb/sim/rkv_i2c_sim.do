@@ -69,7 +69,7 @@ set TestSets { {rkv_i2c_quick_reg_access_test 1} \
                {i2c_master_abrt_sbyte_norstrt_test 1} \
                {i2c_master_tx_empty_intr_test 1} \
                {i2c_master_sda_control_cg_test 1} \
-               {rkv_i2c_master_timeout_cg_test 1} \
+               {i2c_master_timeout_cg_test 1} \
                {i2c_master_abrt_10b_rd_norstrt_test 1} \
                {i2c_master_ss_cnt_test 1} \
                {i2c_master_fs_cnt_test 1} \

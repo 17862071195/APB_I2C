@@ -14,6 +14,8 @@ class rkv_i2c_reg_hw_reset_test extends rkv_i2c_base_test;
     super.build_phase(phase);
     // TODO
     // modify components' configurations
+    super.cfg.master_scoreboard_enable = 0;
+    uvm_config_db#(rkv_i2c_config)::set(this,"env","cfg", super.cfg);
   endfunction
 
   task run_phase(uvm_phase phase);

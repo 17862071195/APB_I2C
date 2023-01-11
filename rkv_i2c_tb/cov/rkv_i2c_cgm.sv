@@ -297,7 +297,18 @@ class rkv_i2c_cgm extends uvm_component;
 	  }
   endgroup
   
-  
+  //--------------------------------------------------
+  // T7 I2C TIMEOUT COUNTER
+  //--------------------------------------------------
+  covergroup timeout_counter_cg with function sample(bit[3:0] cnt);
+    option.name = "timeout_counter_cg";
+    TIMEOUT_COUNTER: coverpoint cnt {
+      bins MAX = {[10:$]};
+      bins NORMAL = {[4:9]};
+      bins MIN = {[1:3]};
+    }
+  endgroup 
+
   function new(string name = "rkv_i2c_cgm", uvm_component parent = null);
     super.new(name, parent);
 	  bits7_or_bits10_addressing_cg = new();
@@ -313,6 +324,7 @@ class rkv_i2c_cgm extends uvm_component;
 	  interrupt_clear_cg = new();
 	  interrupt_hardware_outputs_cg = new(intr);
 	  interrupt_tx_abort_sources_cg = new();
+    timeout_counter_cg = new();
   endfunction
 
   function void build_phase(uvm_phase phase);
@@ -415,6 +427,7 @@ class rkv_i2c_cgm extends uvm_component;
 			  else if(r.get_name() == "IC_CLR_RX_UNDER")  interrupt_clear_cg.sample(1,"CLR_RX_UNDER");
 			  else if(r.get_name() == "IC_CLR_INTR")      interrupt_clear_cg.sample(1,"CLR_INTR");
 			  else if(r.get_name() == "IC_TX_ABRT_SOURCE")interrupt_tx_abort_sources_cg.sample(rgm.IC_TX_ABRT_SOURCE.get()); 
+        else if(r.get_name() == "REG_TIMEOUT_RST")   timeout_counter_cg.sample(rgm.REG_TIMEOUT_RST.get());
 		  end
 	  join_none
   endtask

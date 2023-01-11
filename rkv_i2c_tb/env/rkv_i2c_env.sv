@@ -8,6 +8,7 @@ class rkv_i2c_env extends uvm_component;
   rkv_i2c_config cfg;
 
   virtual rkv_i2c_if vif;
+  virtual lvc_apb_if apb_vif;
 
   lvc_apb_master_agent apb_mst;
 
@@ -45,7 +46,11 @@ class rkv_i2c_env extends uvm_component;
     if(!uvm_config_db#(virtual rkv_i2c_if)::get(this,"","vif", vif)) begin
       `uvm_error("GETVIF","cannot get rkv_i2c_if handle from config DB")
     end
+    if(!uvm_config_db#(virtual lvc_apb_if)::get(this,"","apb_vif", apb_vif)) begin
+      `uvm_error("GETVIF","cannot get lvc_apb_if handle from config DB")
+    end
     cfg.vif = vif;
+    cfg.apb_vif = apb_vif;
 
     if(!uvm_config_db #(ral_block_rkv_i2c)::get(this, "", "rgm", rgm)) begin
       `uvm_info("build_phase", "Unable to get ral_block_rkv_i2c from uvm_config_db and create a RGM locally", UVM_LOW)

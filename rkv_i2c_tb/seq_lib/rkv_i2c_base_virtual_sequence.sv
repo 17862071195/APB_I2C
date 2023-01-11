@@ -8,6 +8,7 @@ virtual class rkv_i2c_base_virtual_sequence extends uvm_sequence;
 	rkv_i2c_config cfg;
   ral_block_rkv_i2c rgm;
   virtual rkv_i2c_if vif;
+  virtual lvc_apb_if apb_vif;
 	rkv_i2c_env env;
 
 
@@ -44,6 +45,7 @@ virtual class rkv_i2c_base_virtual_sequence extends uvm_sequence;
 	  cfg = p_sequencer.cfg;
     rgm = p_sequencer.rgm;
     vif = p_sequencer.vif;
+    apb_vif = cfg.apb_vif;
 	  void'($cast(env , p_sequencer.m_parent));
 	  
     do_reset_callback();
