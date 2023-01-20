@@ -44,6 +44,8 @@ class i2c_master_rx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
                       packet[7] == 8'b0000_1000;
                      })
     join
+
+    rgm.IC_STATUS.mirror(status); 
  
     `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_RX_FULL_INTR_ID;})
     

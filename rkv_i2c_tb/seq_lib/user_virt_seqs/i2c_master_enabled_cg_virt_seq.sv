@@ -27,7 +27,7 @@ class i2c_master_enabled_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
 	  	`uvm_do_on_with(apb_write_packet_seq, p_sequencer.apb_mst_sqr, {
 	  								  packet.size() == 1;
 	  								  packet[0] == 8'b1111_0000;})
-      rgm.IC_STATUS.mirror(status);  
+      rgm.IC_ENABLE_STATUS.mirror(status);  
 
       rgm.IC_ENABLE.ENABLE.set(1);                
       rgm.IC_ENABLE.update(status);
@@ -36,14 +36,14 @@ class i2c_master_enabled_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
 	  								  packet[0] == 8'b1111_0000;
 	  								  packet[1] == 8'b1111_0011;
                       })
-      rgm.IC_STATUS.mirror(status);
+      rgm.IC_ENABLE_STATUS.mirror(status);
       rgm.IC_ENABLE.ENABLE.set(0);
       rgm.IC_ENABLE.update(status);
-      rgm.IC_STATUS.mirror(status);
+      rgm.IC_ENABLE_STATUS.mirror(status);
       `uvm_do_on_with(apb_noread_pkt_seq, p_sequencer.apb_mst_sqr, {
                       packet.size() == 1;})
       #10us;
-      rgm.IC_STATUS.mirror(status);
+      rgm.IC_ENABLE_STATUS.mirror(status);
 
       rgm.IC_ENABLE.ENABLE.set(1);                
       rgm.IC_ENABLE.update(status);
@@ -61,7 +61,7 @@ class i2c_master_enabled_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
         if(rgm.IC_STATUS.RFNE.get() == 1) begin 
           rgm.IC_ENABLE.ENABLE.set(0);
           rgm.IC_ENABLE.update(status);
-          rgm.IC_STATUS.mirror(status);
+          rgm.IC_ENABLE_STATUS.mirror(status);
           break;
         end
       end       
@@ -76,7 +76,7 @@ class i2c_master_enabled_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
                         packet.size() == 1;
                         packet[0] == 8'b11110001;})
       join_any
-      rgm.IC_STATUS.mirror(status);
+      rgm.IC_ENABLE_STATUS.mirror(status);
       //`uvm_do_on(apb_wait_empty_seq, p_sequencer.apb_mst_sqr)
       #1us;
       `uvm_info(get_type_name(), "=====================FINISHED=====================", UVM_LOW)

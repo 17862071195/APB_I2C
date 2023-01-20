@@ -26,11 +26,13 @@ class i2c_master_tx_empty_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
                    {packet.size() == 1;
                     packet[0] == 8'b01011101;
                    })
+    rgm.IC_INTR_STAT.mirror(status);
     fork
       `uvm_do_on_with(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr, {packet.size() == 2;})
     join_none
     
     `uvm_do_on_with(apb_intr_wait_seq,p_sequencer.apb_mst_sqr, {intr_id == IC_TX_EMPTY_INTR_ID;})
+    rgm.IC_INTR_STAT.mirror(status);
 
     if(vif.get_intr(IC_TX_EMPTY_INTR_ID) === 1'b1) `uvm_info("INTRSUCES","IC_TX_EMPTY signal set high successfully", UVM_LOW)
     else  `uvm_error("INTRERR", "IC_TX_EMPTY signal is not high !!!")

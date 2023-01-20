@@ -47,16 +47,21 @@ class i2c_master_rx_over_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
 
     fork
       `uvm_do_on_with(apb_noread_pkt_seq,p_sequencer.apb_mst_sqr,{packet.size() == 2;})
-      `uvm_do_on_with(i2c_slv_read_resp_seq, 
-                      p_sequencer.i2c_slv_sqr,
-                      {packet.size() == 2;
-                      packet[0] == 8'b00001000;
-                      packet[1] == 8'b00001001;
-                     })
+      begin
+        `uvm_do_on_with(i2c_slv_read_resp_seq, 
+                        p_sequencer.i2c_slv_sqr,
+                        {packet.size() == 2;
+                        packet[0] == 8'b00001000;
+                        packet[1] == 8'b00001001;
+                       })
+
+        rgm.IC_INTR_STAT.mirror(status);
+      end
       //tx_abrt_check();
     join_none
  
     `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_RX_OVER_INTR_ID;})
+    rgm.IC_INTR_STAT.mirror(status);
     if(vif.get_intr(IC_RX_OVER_INTR_ID) === 1'b1) `uvm_info("INTRSUCES","IC_RX_OVER_INTR signal set high successfully", UVM_LOW) 
     else  `uvm_error("INTRERR", "IC_RX_OVER_INTR signal is not high !!!")
 

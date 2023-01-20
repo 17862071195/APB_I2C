@@ -19,6 +19,8 @@
 `include "i2c_master_abrt_txdata_noack_virt_seq.sv"
 `include "i2c_master_abrt_7b_addr_noack_virt_seq.sv"
 `include "i2c_master_timeout_cg_virt_seq.sv"
+`include "i2c_master_hs_master_code_virt_seq.sv"
+`include "i2c_master_start_byte_virt_seq.sv"
 
 `endif // RKV_I2C_USER_VIRTUAL_SEQUENCES_SVH
 

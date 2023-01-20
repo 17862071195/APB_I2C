@@ -74,6 +74,8 @@ set TestSets { {rkv_i2c_quick_reg_access_test 1} \
                {i2c_master_ss_cnt_test 1} \
                {i2c_master_fs_cnt_test 1} \
                {i2c_master_hs_cnt_test 1} \
+               {i2c_master_hs_master_code_test 1} \
+               {i2c_master_start_byte_test 1} \
              }
 set VERB UVM_HIGH
 #vsim -onfinish stop -cover -sv_seed 21 +UVM_TESTNAME=i2c_master_tx_abrt_intr_test -l regr_ucdb_${timetag}/run_i2c_master_tx_abrt_intr_test_21.log  work.rkv_i2c_tb

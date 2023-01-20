@@ -1,131 +1,18 @@
-# do rkv_i2c_sim.do
-# ../../rkv_dw_apb_i2c
-# .
-# +incdir+../../rkv_dw_apb_i2c/src  +incdir+../agents/lvc_apb3  +incdir+../agents/lvc_i2c  +incdir+../cfg  +incdir+../cov  +incdir+../reg  +incdir+../env  +incdir+../seq_lib  +incdir+../seq_lib/elem_seqs  +incdir+../seq_lib/user_elem_seqs  +incdir+../seq_lib/user_virt_seqs  +incdir+../tests/user_tests  +incdir+../tests 
-# vlog -timescale=1ns/1ps -l comp.log +incdir+../../rkv_dw_apb_i2c/src  +incdir+../agents/lvc_apb3  +incdir+../agents/lvc_i2c  +incdir+../cfg  +incdir+../cov  +incdir+../reg  +incdir+../env  +incdir+../seq_lib  +incdir+../seq_lib/elem_seqs  +incdir+../seq_lib/user_elem_seqs  +incdir+../seq_lib/user_virt_seqs  +incdir+../tests/user_tests  +incdir+../tests 
-# work comp.log
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:07 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -f rkv_i2c.flist 
-# -- Compiling module rkv_DW_apb_i2c_bcm57
-# -- Compiling module rkv_DW_apb_i2c_bcm21
-# -- Compiling module rkv_DW_apb_i2c_bcm41
-# -- Compiling module rkv_DW_apb_i2c_bcm47
-# -- Compiling module rkv_DW_apb_i2c_bcm06
-# -- Compiling module rkv_DW_apb_i2c_bcm05
-# -- Compiling module rkv_DW_apb_i2c_bcm07
-# -- Compiling module rkv_DW_apb_i2c_regs
-# -- Compiling module rkv_DW_apb_i2c_tog
-# -- Compiling module rkv_DW_apb_i2c_bcm99
-# -- Compiling module rkv_DW_apb_i2c_biu
-# -- Compiling module rkv_DW_apb_i2c_regfile
-# -- Compiling module rkv_DW_apb_i2c_fifo
-# -- Compiling module rkv_DW_apb_i2c_async_fifo
-# -- Compiling module rkv_DW_apb_i2c_intctl
-# -- Compiling module rkv_DW_apb_i2c_rx_filter
-# -- Compiling module rkv_DW_apb_i2c_clk_gen
-# -- Compiling module rkv_DW_apb_i2c_mstfsm
-# -- Compiling module rkv_DW_apb_i2c_sync
-# -- Compiling module rkv_DW_apb_i2c_slvfsm
-# -- Compiling module rkv_DW_apb_i2c_tx_shift
-# -- Compiling module rkv_DW_apb_i2c_rx_shift
-# -- Compiling module rkv_DW_apb_i2c_toggle
-# -- Compiling module rkv_DW_apb_i2c_dma
-# -- Compiling module rkv_DW_apb_i2c
-# 
-# Top level modules:
-# 	rkv_DW_apb_i2c_bcm47
-# 	rkv_DW_apb_i2c_bcm99
-# 	rkv_DW_apb_i2c_async_fifo
-# 	rkv_DW_apb_i2c_dma
-# 	rkv_DW_apb_i2c
-# End time: 23:35:07 on Jan 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:07 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../agents/lvc_apb3/lvc_apb_if.sv 
-# -- Compiling interface lvc_apb_if
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) ../agents/lvc_apb3/lvc_apb_if.sv(36): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:08 on Jan 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:08 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../agents/lvc_apb3/lvc_apb_pkg.sv 
-# -- Compiling package lvc_apb_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) ../agents/lvc_apb3/lvc_apb_pkg.sv(23): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:08 on Jan 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:08 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../agents/lvc_i2c/lvc_i2c_if.sv 
-# -- Compiling interface lvc_i2c_if
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:08 on Jan 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:08 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../agents/lvc_i2c/lvc_i2c_pkg.sv 
-# -- Compiling package lvc_i2c_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) ../agents/lvc_i2c/lvc_i2c_pkg.sv(25): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:09 on Jan 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:09 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../env/rkv_i2c_pkg.sv 
-# -- Compiling package rkv_i2c_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) ../env/rkv_i2c_pkg.sv(7): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Importing package lvc_apb_pkg
-# -- Importing package lvc_i2c_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:10 on Jan 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:10 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../tb/rkv_i2c_if.sv 
-# -- Compiling interface rkv_i2c_if
-# -- Importing package rkv_i2c_pkg
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# -- Importing package lvc_apb_pkg
-# -- Importing package lvc_i2c_pkg
-# ** Note: (vlog-2286) ../tb/rkv_i2c_if.sv(7): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:35:11 on Jan 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 23:35:11 on Jan 11,2023
-# vlog -timescale=1ns/1ps -l comp.log "+incdir+../../rkv_dw_apb_i2c/src" "+incdir+../agents/lvc_apb3" "+incdir+../agents/lvc_i2c" "+incdir+../cfg" "+incdir+../cov" "+incdir+../reg" "+incdir+../env" "+incdir+../seq_lib" "+incdir+../seq_lib/elem_seqs" "+incdir+../seq_lib/user_elem_seqs" "+incdir+../seq_lib/user_virt_seqs" "+incdir+../tests/user_tests" "+incdir+../tests" -sv ../tb/rkv_i2c_tb.sv 
-# -- Compiling module rkv_i2c_tb
-# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-# ** Note: (vlog-2286) ../tb/rkv_i2c_tb.sv(8): Using implicit +incdir+/opt/mentor/questasim10.7/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-# -- Importing package rkv_i2c_pkg
-# -- Importing package lvc_apb_pkg
-# -- Importing package lvc_i2c_pkg
-# 
-# Top level modules:
-# 	rkv_i2c_tb
-# End time: 23:35:13 on Jan 11,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# 2023Jan11-23_35
-#  {rkv_i2c_quick_reg_access_test 1}  {rkv_i2c_master_directed_write_packet_test 1}  {rkv_i2c_master_directed_read_packet_test 1}  {rkv_i2c_master_directed_interrupt_test 1}  {i2c_master_rx_over_intr_test 1}  {i2c_master_rx_full_intr_test 1}  {i2c_master_enabled_cg_test 1}  {i2c_master_tx_abrt_intr_test 1}  {i2c_master_activity_intr_output_test 1}  {master_address_cg_test 1}  {i2c_master_abrt_txdata_noack_test 1}  {i2c_master_tx_full_intr_test 1}  {rkv_i2c_reg_access_test 1}  {rkv_i2c_reg_bit_bash_test 1}  {rkv_i2c_reg_hw_reset_test 1}  {i2c_master_abrt_7b_addr_noack_test 1}  {i2c_master_abrt_sbyte_norstrt_test 1}  {i2c_master_tx_empty_intr_test 1}  {i2c_master_sda_control_cg_test 1}  {i2c_master_timeout_cg_test 1}  {i2c_master_abrt_10b_rd_norstrt_test 1}  {i2c_master_ss_cnt_test 1}  {i2c_master_fs_cnt_test 1}  {i2c_master_hs_cnt_test 1}  
-# UVM_HIGH
-# Simulating rkv_i2c_quick_reg_access_test
-# 53 +UVM_TESTNAME=rkv_i2c_quick_reg_access_test -l regr_ucdb_2023Jan11-23_35/run_rkv_i2c_quick_reg_access_test_53.log
+# //  Questa Sim
+# //  Version 10.7c linux Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
+# coverage read -dataset regr_2023Jan20_22_56 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb opened as coverage dataset "regr_2023Jan20_22_56"

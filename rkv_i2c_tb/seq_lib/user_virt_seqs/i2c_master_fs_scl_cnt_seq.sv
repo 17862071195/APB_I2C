@@ -58,10 +58,10 @@ class i2c_master_fs_scl_cnt_seq extends rkv_i2c_base_virtual_sequence;
 	  
 	  #10us;
 	  
-	  //test 200kbs in FS mode
+	  //test 100kbs in FS mode
 		rgm.IC_ENABLE.ENABLE.set(0);  rgm.IC_ENABLE.update(status);
-		rgm.IC_FS_SCL_HCNT.IC_FS_SCL_HCNT.set(250);  rgm.IC_FS_SCL_HCNT.update(status);
-	  rgm.IC_FS_SCL_LCNT.IC_FS_SCL_LCNT.set(250);  rgm.IC_FS_SCL_LCNT.update(status);
+		rgm.IC_FS_SCL_HCNT.IC_FS_SCL_HCNT.set(450);  rgm.IC_FS_SCL_HCNT.update(status);
+	  rgm.IC_FS_SCL_LCNT.IC_FS_SCL_LCNT.set(450);  rgm.IC_FS_SCL_LCNT.update(status);
 	  rgm.IC_ENABLE.ENABLE.set(1);  rgm.IC_ENABLE.update(status);
 //	  fork
 //			`uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)

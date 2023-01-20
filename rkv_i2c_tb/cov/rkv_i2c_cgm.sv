@@ -147,11 +147,11 @@ class rkv_i2c_cgm extends uvm_component;
   // T4.2   rx fifo status
   covergroup rx_fifo_status_cg with function sample(bit [0:0] rff, bit [0:0] rfne);
 	  option.name = "rx_fifo_status_cg";
-	  TFE : coverpoint rff  {
+	  RFE : coverpoint rff  {
 		  bins full = {1'b1};
 		  bins not_full = {1'b0};
 	  }
-	  TFNF : coverpoint rfne {
+	  RFNF : coverpoint rfne {
 		  bins not_empty = {1'b1};
 		  bins empty = {1'b0};
 	  }
@@ -237,7 +237,7 @@ class rkv_i2c_cgm extends uvm_component;
 	  CLR_INTR :      coverpoint clr iff(field == "CLR_INTR")       {bins clear = {1};}
   endgroup 
   // T5.3    interrupt_hardware_outputs_cg
-  covergroup interrupt_hardware_outputs_cg (bit [IC_INTR_NUM-1 :0] intr) @(interrupt_hardware_eve);
+  covergroup interrupt_hardware_outputs_cg with function sample(bit [IC_INTR_NUM-1 :0] intr);
 	  option.name = "interrupt_hardware_outputs_cg";
 	  GEN_CALL_INTR_ID  : coverpoint intr[IC_GEN_CALL_INTR_ID]  {bins intr = {1};}
 	  RX_UNDER_INTR_ID  : coverpoint intr[IC_RX_UNDER_INTR_ID]  {bins intr = {1};}
@@ -309,7 +309,7 @@ class rkv_i2c_cgm extends uvm_component;
     }
   endgroup 
 
-  function new(string name = "rkv_i2c_cgm", uvm_component parent = null);
+  function new(string name = "rkv_i2c_cgm", uvm_component parent);   // = null);
     super.new(name, parent);
 	  bits7_or_bits10_addressing_cg = new();
 	  target_address_and_slave_address_cg = new();
@@ -322,7 +322,7 @@ class rkv_i2c_cgm extends uvm_component;
 	  rx_fifo_status_cg = new();
 	  interrupt_status_cg = new();
 	  interrupt_clear_cg = new();
-	  interrupt_hardware_outputs_cg = new(intr);
+	  interrupt_hardware_outputs_cg = new();
 	  interrupt_tx_abort_sources_cg = new();
     timeout_counter_cg = new();
   endfunction
@@ -350,6 +350,7 @@ class rkv_i2c_cgm extends uvm_component;
   task run_phase(uvm_phase phase);
     super.run_phase(phase);
 	  do_sample_reg();
+    do_sample_signals();
   endtask
 
   virtual function void write_apb_master(lvc_apb_transfer tr);
@@ -437,7 +438,8 @@ class rkv_i2c_cgm extends uvm_component;
 	  fork
 		  forever begin
 	  		@(vif.intr iff vif.apb_rstn && enable && vif.intr!==0) 
-	  		-> interrupt_hardware_eve;
+        //`uvm_error("MY", $sformatf("vif.apb_rstn = %b \n enable = %b \n  vif.intr = %b \n", vif.apb_rstn, enable, vif.intr) )
+	  		interrupt_hardware_outputs_cg.sample(vif.intr);
 	  	end
 	  join_none
   endtask

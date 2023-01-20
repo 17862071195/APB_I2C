@@ -26,6 +26,8 @@ class i2c_master_activity_intr_output_virt_seq extends rkv_i2c_base_virtual_sequ
     rgm.IC_INTR_MASK.M_STOP_DET.set(1);
     rgm.IC_INTR_MASK.update(status);
 
+    rgm.IC_INTR_STAT.mirror(status);    //for sampling IC_INTR_STAT.R_AVTIVITY
+
     fork     
       `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_START_DET_INTR_ID;})
       `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_ACTIVITY_INTR_ID;})
@@ -41,14 +43,21 @@ class i2c_master_activity_intr_output_virt_seq extends rkv_i2c_base_virtual_sequ
                      })
       `uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)
     join  
+
     if(vif.get_intr(IC_START_DET_INTR_ID) === 1'b1) `uvm_info("INTRSUCES","R_START_DET signal set high successfully", UVM_LOW)
     else  `uvm_error("INTRERR", "R_START_DET signal is not high !!!")
     if(vif.get_intr(IC_ACTIVITY_INTR_ID) === 1'b1) `uvm_info("INTRSUCES","R_ACTIVITY_DET signal set high successfully", UVM_LOW)
     else  `uvm_error("INTRERR", "R_ACTIVITY_DET signal is not high !!!")
     if(vif.get_intr(IC_STOP_DET_INTR_ID) === 1'b1) `uvm_info("INTRSUCES","R_STOP_DET signal set high successfully", UVM_LOW)
     else  `uvm_error("INTRERR", "R_STOP_DET signal is not high !!!")
-   
-    `uvm_do_on_with(apb_intr_clear_seq,p_sequencer.apb_mst_sqr,{intr_id == IC_ACTIVITY_INTR_ID;})
+
+    rgm.IC_INTR_STAT.mirror(status);
+    if(rgm.IC_INTR_STAT.R_ACTIVITY.get() != 1) `uvm_error("REGERR", "IC_INTR_STAT.R_ACTIVITY register is not 1 !!!")
+    rgm.IC_CLR_ACTIVITY.mirror(status);
+    rgm.IC_INTR_STAT.mirror(status);
+    if(rgm.IC_INTR_STAT.R_ACTIVITY.get() != 0) `uvm_error("REGERR", "IC_INTR_STAT.R_ACTIVITY register is not 0 !!!")
+
+   `uvm_do_on_with(apb_intr_clear_seq,p_sequencer.apb_mst_sqr,{intr_id == IC_ACTIVITY_INTR_ID;}) 
     `uvm_do_on_with(apb_intr_clear_seq,p_sequencer.apb_mst_sqr,{intr_id == IC_START_DET_INTR_ID;})
     `uvm_do_on_with(apb_intr_clear_seq,p_sequencer.apb_mst_sqr,{intr_id == IC_STOP_DET_INTR_ID;})   
 

@@ -30,6 +30,7 @@ class i2c_master_tx_abrt_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
                     packet[4] == 8'b0101_0011;
                    })
     `uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)
+    rgm.IC_INTR_STAT.mirror(status);
     
     rgm.IC_ENABLE.ABORT.set(1);
     rgm.IC_ENABLE.update(status);
@@ -37,6 +38,9 @@ class i2c_master_tx_abrt_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
     `uvm_do_on_with(apb_intr_wait_seq ,p_sequencer.apb_mst_sqr, {intr_id == IC_TX_ABRT_INTR_ID;})
     if(vif.get_intr(IC_TX_ABRT_INTR_ID) === 1) `uvm_info("SUCCESS", "TX_ABRT test successfully!", UVM_LOW)
     else `uvm_error("INTRERR", "interrupt output IC_TX_ABRT_INTR_ID is not high!") 
+    
+    rgm.IC_INTR_STAT.mirror(status);
+    if(rgm.IC_INTR_STAT.R_TX_ABRT.get() != 1) `uvm_error("REGERR", "IC_INTR_STAT.R_TX_ABRT register is not 1!")
     
     `uvm_info("MMM",$sformatf("%b",rgm.IC_TX_ABRT_SOURCE.get()), UVM_LOW)
     `uvm_do_on_with(apb_intr_clear_seq, p_sequencer.apb_mst_sqr, {
