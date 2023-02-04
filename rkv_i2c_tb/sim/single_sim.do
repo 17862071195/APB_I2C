@@ -78,7 +78,7 @@ set TestSets { {rkv_i2c_quick_reg_access_test 1} \
                {i2c_master_start_byte_test 1} \
              }
 set VERB UVM_HIGH
-set TestName i2c_master_rx_over_intr_test
+set TestName i2c_master_sda_control_cg_test
 set SEED [expr int(rand()*100)] 
 echo Simulating $TestName
 echo +UVM_TESTNAME=$TestName -l regr_ucdb_${timetag}/run_${TestName}_${SEED}.log 

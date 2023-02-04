@@ -44,6 +44,7 @@ class i2c_master_abrt_10b_rd_norstrt_virt_seq extends rkv_i2c_base_virtual_seque
                       packet[5] == 8'b0000_0110;
                      })
     join_none
+    rgm.IC_INTR_STAT.mirror(status);
      
     `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_TX_ABRT_INTR_ID;})
     #1us;

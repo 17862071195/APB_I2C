@@ -12,7 +12,7 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
-coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
-# coverage read -dataset regr_2023Jan20_22_56 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb
-# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Jan20-22_56/regr_2023Jan20-22_56.ucdb opened as coverage dataset "regr_2023Jan20_22_56"
+add testbrowser /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Feb04-17_34/regr_2023Feb04-17_34.ucdb
+coverage open /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Feb04-17_34/regr_2023Feb04-17_34.ucdb
+# coverage read -dataset regr_2023Feb04_17_34 /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Feb04-17_34/regr_2023Feb04-17_34.ucdb
+# /home/verifier/DVT_Code/APB_I2C/rkv_i2c_tb/sim/regr_ucdb_2023Feb04-17_34/regr_2023Feb04-17_34.ucdb opened as coverage dataset "regr_2023Feb04_17_34"

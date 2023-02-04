@@ -21,6 +21,7 @@
 	`include "i2c_master_timeout_cg_test.sv"
 	`include "i2c_master_hs_master_code_test.sv"
 	`include "i2c_master_start_byte_test.sv"
+	`include "i2c_master_intr_status_test.sv"
 
 `endif // RKV_I2C_USER_TESTS_SVH
 

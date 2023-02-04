@@ -14,6 +14,12 @@ class i2c_master_tx_empty_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
     vif.wait_rstn_release();    
     vif.wait_apb(10);
 
+    `uvm_info("VALUE",$sformatf("Value of M_MASTER_ON_HOLD_read_only is %b",rgm.IC_INTR_MASK.M_MASTER_ON_HOLD_read_only.get()), UVM_LOW)
+    rgm.IC_INTR_MASK.M_MASTER_ON_HOLD_read_only.set(1);
+    rgm.IC_INTR_MASK.update(status);
+    `uvm_info("VALUE",$sformatf("Value of M_MASTER_ON_HOLD_read_only is %b",rgm.IC_INTR_MASK.M_MASTER_ON_HOLD_read_only.get()), UVM_LOW)
+    rgm.IC_ENABLE.ENABLE.set(0);
+    rgm.IC_ENABLE.update(status);
     `uvm_do_on_with(apb_user_cfg_seq, p_sequencer.apb_mst_sqr, {
                     SPEED == 2;
 										IC_10BITADDR_MASTER == 0;

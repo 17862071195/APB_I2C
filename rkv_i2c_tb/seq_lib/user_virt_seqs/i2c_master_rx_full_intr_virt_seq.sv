@@ -4,6 +4,7 @@
 class i2c_master_rx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
   `uvm_object_utils(i2c_master_rx_full_intr_virt_seq)
 
+  bit [7:0] data[0:10];
   function new(string name="i2c_master_rx_full_intr_virt_seq");
     super.new(name);
   endfunction
@@ -16,6 +17,8 @@ class i2c_master_rx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
 
     //rgm.IC_RX_TL.RX_TL.set(3);
     //rgm.IC_RX_TL.update(status);
+    rgm.IC_INTR_MASK.M_RX_UNDER.set(1);
+    rgm.IC_INTR_MASK.update(status);
     `uvm_do_on_with(apb_cfg_seq, 
                     p_sequencer.apb_mst_sqr,
                     {SPEED == 2;
@@ -44,7 +47,6 @@ class i2c_master_rx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
                       packet[7] == 8'b0000_1000;
                      })
     join
-
     rgm.IC_STATUS.mirror(status); 
  
     `uvm_do_on_with(apb_intr_wait_seq, p_sequencer.apb_mst_sqr, {intr_id == IC_RX_FULL_INTR_ID;})
@@ -53,10 +55,17 @@ class i2c_master_rx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
       if(vif.get_intr(IC_RX_FULL_INTR_ID) === 1'b1) begin `uvm_info("INTRSUCES","IC_RX_FULL_INTR signal set high successfully", UVM_LOW) break; end
       else  `uvm_error("INTRERR", "IC_RX_FULL_INTR signal is not high !!!")
       @(vif.i2c_ck);  
+    end    
+    // intr: RX_UNDER     
+    foreach(data[i]) begin
+      rgm.IC_DATA_CMD.mirror(status);
+      data[i] = rgm.IC_DATA_CMD.DAT.get();
     end
+    rgm.IC_INTR_STAT.mirror(status);
 
     //`uvm_do_on(apb_wait_empty_seq, p_sequencer.apb_mst_sqr)
     #10us;
+    rgm.IC_INTR_STAT.mirror(status);
     
     `uvm_info(get_type_name(), "=====================FINISHED=====================", UVM_LOW)
   endtask

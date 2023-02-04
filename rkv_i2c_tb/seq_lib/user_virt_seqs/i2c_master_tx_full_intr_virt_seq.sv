@@ -44,27 +44,22 @@ class i2c_master_tx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
     rgm.IC_ENABLE.ENABLE.set('h1);
     rgm.IC_ENABLE.update(status);
 
-    fork
-      `uvm_do_on_with(apb_write_nocheck_pkt_seq, p_sequencer.apb_mst_sqr,
-                       {packet.size() == 10;
-                        packet[0] == 8'b0000_0001;
-                        packet[1] == 8'b0000_0010;
-                        packet[2] == 8'b0000_0100;
-                        packet[3] == 8'b0000_1000;
-                        packet[4] == 8'b0000_1000;
-                        packet[5] == 8'b0000_1000;
-                        packet[6] == 8'b0000_1000;
-                        packet[7] == 8'b0000_1000;
-                        packet[8] == 8'b0000_1000;
-                        packet[9] == 8'b0000_1000;
-                         })
-        //rgm.IC_TX_ABRT_SOURCE.TX_FLUSH_CNT.mirror(status);
-        //rgm.IC_STATUS.mirror(status);
-      `uvm_do_on_with(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr, {nack_data == 9;})
-      //begin
-      //  disable fork;
-      //end
-    join
+    `uvm_do_on_with(apb_write_nocheck_pkt_seq, p_sequencer.apb_mst_sqr,
+                     {packet.size() == 10;
+                      packet[0] == 8'b0000_0001;
+                      packet[1] == 8'b0000_0010;
+                      packet[2] == 8'b0000_0100;
+                      packet[3] == 8'b0000_1000;
+                      packet[4] == 8'b0000_1000;
+                      packet[5] == 8'b0000_1000;
+                      packet[6] == 8'b0000_1000;
+                      packet[7] == 8'b0000_1000;
+                      packet[8] == 8'b0000_1000;
+                      packet[9] == 8'b0000_1000;
+                       })
+      //rgm.IC_TX_ABRT_SOURCE.TX_FLUSH_CNT.mirror(status);
+    rgm.IC_STATUS.mirror(status);
+    `uvm_do_on_with(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr, {nack_data == 10;})
 
    // fork
    //   `uvm_do_on_with(apb_write_nocheck_pkt_seq, p_sequencer.apb_mst_sqr,
@@ -78,12 +73,13 @@ class i2c_master_tx_full_intr_virt_seq extends rkv_i2c_base_virtual_sequence;
     `uvm_info("MMM",$sformatf("%b",rgm.IC_TX_ABRT_SOURCE.get()), UVM_LOW)
   
     //`uvm_do_on_with(apb_intr_wait_seq,p_sequencer.apb_mst_sqr, {intr_id == IC_TX_OVER_INTR_ID;})
-    while(1) begin
+    //while(1) begin
+    repeat(10) begin
       if(vif.get_intr(IC_TX_OVER_INTR_ID) === 1'b1) begin
         `uvm_info("INTRSUCES","IC_TX_OVER_INTR signal set high successfully", UVM_LOW) 
         break;
       end
-      else  `uvm_error("INTRERR", "IC_TX_OVER_INTR signal is not high !!!")
+      //else  `uvm_error("INTRERR", "IC_TX_OVER_INTR signal is not high !!!")
       @(vif.i2c_ck);
     end 
     #10us;

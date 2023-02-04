@@ -21,6 +21,7 @@
 `include "i2c_master_timeout_cg_virt_seq.sv"
 `include "i2c_master_hs_master_code_virt_seq.sv"
 `include "i2c_master_start_byte_virt_seq.sv"
+`include "i2c_master_intr_status_virt_seq.sv"
 
 `endif // RKV_I2C_USER_VIRTUAL_SEQUENCES_SVH
 

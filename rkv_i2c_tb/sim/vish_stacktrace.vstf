@@ -8,3 +8,26 @@
 # 1    0x09a0e7eb: '<unknown (@0x9a0e7eb)>'
 # End of Stack Trace
 
+# Current time Sat Feb  4 17:02:06 2023
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linux"
+# 0    0xf7d28569: '__memcpy_ssse3_rep + 0xcb9' in '/lib/libc.so.6'
+# 1    0x74776f5f: '<unknown (@0x74776f5f)>'
+# Current time Sat Feb  4 17:11:06 2023
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linux"
+# 0    0x085b940f: '<unknown (@0x85b940f)>'
+# 1    0x0a2c4a4b: '<unknown (@0xa2c4a4b)>'
+# Current time Sat Feb  4 17:29:17 2023
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linux"
+# 0    0xf7d1c520: '__strcmp_sse4_2 + 0x200' in '/lib/libc.so.6'

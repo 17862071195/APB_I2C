@@ -71,6 +71,29 @@ class i2c_master_sda_control_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
 			#1us;
 		end
 		
+    // SDA setup
+ 		foreach (hold_time[i]) begin			
+			rgm.IC_SDA_SETUP.SDA_SETUP.set(hold_time[i]);  rgm.IC_SDA_SETUP.update(status);
+			rgm.IC_ENABLE.ENABLE.set(1'b1);  rgm.IC_ENABLE.update(status);
+			fork
+				`uvm_do_on_with(apb_write_packet_seq, p_sequencer.apb_mst_sqr, {
+											packet.size() == 1;
+											packet[0] == 8'b11110000;})
+				`uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)
+			join
+			
+			#1us;
+			
+			fork 
+				`uvm_do_on_with(apb_read_packet_seq, p_sequencer.apb_mst_sqr, {packet.size() == 1;})
+				`uvm_do_on_with(i2c_slv_read_resp_seq, p_sequencer.i2c_slv_sqr, {
+												packet.size()==1;
+												packet[0] == 8'b10101010;})
+			join	
+			rgm.IC_ENABLE.ENABLE.set(0);  rgm.IC_ENABLE.update(status);
+			#1us;
+		end
+   
 		`uvm_do_on(apb_wait_empty_seq, p_sequencer.apb_mst_sqr)
 		#1us;
 		`uvm_info(get_type_name(), "==================== FINISHED=====================", UVM_LOW)

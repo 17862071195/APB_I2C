@@ -278,7 +278,7 @@ class rkv_i2c_cgm extends uvm_component;
   endgroup
   
   // T6      setup and hold timing with dedicated registers
-  covergroup sda_control_cg with function sample(bit [23:16] tx_hold, bit [15:0] rx_hold, bit [7:0]setup, string field);
+  covergroup sda_control_cg with function sample(bit [23:16] tx_hold, bit [15:0] rx_hold, bit [7:0] setup, string field);
 	  option.name = "sda_control_cg";
 	  SDA_TX_HOLD : coverpoint tx_hold iff (field == "IC_SDA_HOLD") {
 		  bins MAX = {[100:$]};
@@ -290,7 +290,7 @@ class rkv_i2c_cgm extends uvm_component;
 		  bins MID = {[10:99]};
 		  bins MIN = {[1:9]};		  
 	  }
-	  SDA_SETUP : coverpoint rx_hold iff (field == "IC_SDA_SETUP") {
+	  SDA_SETUP : coverpoint setup iff (field == "IC_SDA_SETUP") {
 		  bins MAX = {[100:$]};
 		  bins MID = {[10:99]};
 		  bins MIN = {[1:9]};		  

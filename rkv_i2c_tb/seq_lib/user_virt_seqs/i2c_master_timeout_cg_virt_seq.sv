@@ -4,6 +4,7 @@
 class i2c_master_timeout_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
   `uvm_object_utils(i2c_master_timeout_cg_virt_seq)
   int apb_clk_counter = 0;
+  bit [3:0] timeout[] = '{4'b0001, 4'b0110, 4'b1011};
 
   function new(string name="i2c_master_timeout_cg_virt_seq");
     super.new(name);
@@ -25,21 +26,23 @@ class i2c_master_timeout_cg_virt_seq extends rkv_i2c_base_virtual_sequence;
 
       if(apb_vif.pslverr !== 0) `uvm_error("SIGERR","pslverr signal is high !!!")
 
-      rgm.IC_ENABLE_ENABLE.set(0);
-      rgm.IC_ENABLE.update(status);
-      rgm.REG_TIMEOUT_RST.write(status,'h04);
-      rgm.REG_TIMEOUT_RST.read(status,data);
-
-      fork
-        wait_pslverr();
-        begin
-          rgm.IC_CON.MASTER_MODE.set(1);
-          rgm.IC_CON.IC_SLAVE_DISABLE.set(0);
-          rgm.IC_CON.update(status);
-          rgm.IC_ENABLE_ENABLE.set(1);
-          rgm.IC_ENABLE.update(status);
-        end  
-      join  
+      foreach(timeout[i]) begin
+        rgm.IC_ENABLE_ENABLE.set(0);
+        rgm.IC_ENABLE.update(status);
+        rgm.REG_TIMEOUT_RST.write(status,timeout[i]);
+        rgm.REG_TIMEOUT_RST.read(status,data);
+        rgm.IC_ENABLE_ENABLE.set(1);
+        rgm.IC_ENABLE.update(status);
+        fork
+          wait_pslverr();
+          `uvm_do_on_with(apb_write_nocheck_pkt_seq, 
+                        p_sequencer.apb_mst_sqr,
+                       {packet.size() == 9; 
+                        foreach(packet[j]) packet[j] == 8'b0000_0000 + j;
+                       })
+        join
+        `uvm_do_on(i2c_slv_write_resp_seq, p_sequencer.i2c_slv_sqr)
+      end
 
       //`uvm_error("SIGERR","pslverr signal is slow !!!")
       
